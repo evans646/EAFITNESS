@@ -14,4 +14,4 @@
 <img src="/images/third.png" alt="" width="700">
 <img src="/images/forth.png" alt="" width="700">
 
-View live site <a href="https://still-beach-39111.herokuapp.com">here</a>
+View live site <a href="https://still-beach-39111.herokuapp.com" target="_blank">here</a>
