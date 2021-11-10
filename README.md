@@ -10,6 +10,6 @@
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
 <img src="/images/first.png" alt="" width="700">
-<img src="/images/second" alt="" width="700">
-<img src="/images/third" alt="" width="700">
-<img src="/images/forth" alt="" width="700">
+<img src="/images/second.png" alt="" width="700">
+<img src="/images/third.png" alt="" width="700">
+<img src="/images/forth.png" alt="" width="700">
