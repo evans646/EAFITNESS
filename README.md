@@ -7,6 +7,6 @@
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership</li>
     <li>Users can use promo codes to get percentages off their premium subscriptions</li>
-    <li>User can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
+    <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
 
