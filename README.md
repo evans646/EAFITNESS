@@ -9,7 +9,7 @@
     <li>Users can use promo codes to get percentages off their premium subscriptions</li>
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
-<img src="/images/first" alt="" width="700">
+<img src="/images/first.png" alt="" width="700">
 <img src="/images/second" alt="" width="700">
 <img src="/images/third" alt="" width="700">
 <img src="/images/forth" alt="" width="700">
