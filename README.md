@@ -6,7 +6,7 @@
 </h5>
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership</li>
-    <li>Users can use promo codes to get percentages off their premium subscriptions</li>
+    <li>Users can use promo codes to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
 <img src="/images/first.png" alt="" width="700">
