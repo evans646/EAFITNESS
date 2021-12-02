@@ -9,6 +9,9 @@
     <li>Users can use promo codes to get percentages off their premium subscriptions</li>
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
+
+<p>This project also features Django authentication as users needs to be authenticated before they can subscribe to premium features</p>
+
 <img src="/images/first" alt="" width="700">
 <img src="/images/second" alt="" width="700">
 <img src="/images/third" alt="" width="700">

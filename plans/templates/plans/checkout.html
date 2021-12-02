@@ -29,7 +29,7 @@
             <strong>${{final_dollar}}</strong>
           </li>
         </ul>
-
+        
         <form class="card p-2" action="{% url 'checkout' %}" method="GET">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Promo code" name="coupon">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </form>
-
+ 
         <div class="text-center pt-3">
         <form action="{% url 'checkout' %}" method="POST">
           {% csrf_token %}
@@ -60,7 +60,4 @@
         </div>
       </div>
       </div>
-
-
-
 {% endblock %}

@@ -6,12 +6,12 @@
   <h1 class="display-4">Welcome to Evans Fitness</h1>
   <h3>"If you think lifting is dangerous, try being weak. Being weak is dangerous".</h3>
   <p class="lead">Fitness Is Fun</p>
-  <a href="{% url 'join' %}"><button type="button" class="btn btn-lg btn-primary">Get Premium</button></a>
+  <a href="{% url 'join' %}"><button class='button-style'>Get Premium</button></a>
 </div>
 
 <div class="container">
 
-  <h3>Trending Articles</h3>
+  <h3 class='articles-heading'>Trending Articles</h3>
   <ul>
     {% for plan in plans.all %}
 

@@ -6,9 +6,11 @@ from django.views import generic
 from .models import FitnessPlan,Customer
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
-from django.http import HttpRequest
+from django.http import HttpResponse
 import stripe
 stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53rjWyuIV9maaKp4Qn9VpO7RE5A8wX2QCcEJo006qsqVE3X'
+
+
 
 #only super users can access this account
 @user_passes_test(lambda u: u.is_superuser)
@@ -46,7 +48,7 @@ def join(request):
 
 @login_required
 def checkout(request):
-
+    
     try:
         if request.user.customer.membership:
             return redirect('settings')
