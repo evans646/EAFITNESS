@@ -27,11 +27,13 @@ for example : 232 as cvc and 02/2022 as expiry date
    <li>6200000000000005</li>
 </ol>
 
-<img src="/images/first.png" alt="project" width="700">
-<img src="/images/second.png" alt="project"  width="700">
-<img src="/images/third.png" alt="project"  width="700">
-<img src="/images/forth.png" alt="project"  width="700">
-<img src="/images/fifth" alt="project"  width="700">
+<i
+<img src="/images/first.png" alt="" width="700">
+<img src="/images/second.png" alt="" width="700">
+<img src="/images/third.png" alt="" width="700">
+<img src="/images/forth.png" alt="" width="700">
+<img src="/images/fifth.png" alt="" width="700">
+
 
 View live site <a href="https://still-beach-39111.herokuapp.com" target="_blank">here</a>
 
