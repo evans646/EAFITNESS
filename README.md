@@ -13,7 +13,7 @@
 
 <p>This project also features Django authentication as users needs to be Authenticated and Authorization before they can subscribe to premium</p>
  
-<p>You can also use sample cards to test payments.
+<p>You can  use below sample cards to test payments.
 Use any three digits as CVC and any future date
 
 for example : 232 as cvc and 02/2022 as expiry date 
@@ -27,7 +27,10 @@ for example : 232 as cvc and 02/2022 as expiry date
    <li>6200000000000005</li>
 </ol>
 
-<i
+
+
+
+
 <img src="/images/first.png" alt="" width="700">
 <img src="/images/second.png" alt="" width="700">
 <img src="/images/third.png" alt="" width="700">
