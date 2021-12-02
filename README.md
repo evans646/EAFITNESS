@@ -6,9 +6,10 @@
 </h5>
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership</li>
-    <li>Users can use promo codes to get percentages off their premium subscriptions</li>
+    <li>Users can use promo codes to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
 </ul>
+<<<<<<< HEAD
 
 <p>This project also features Django authentication as users needs to be authenticated before they can subscribe to premium features</p>
 
@@ -16,3 +17,11 @@
 <img src="/images/second" alt="" width="700">
 <img src="/images/third" alt="" width="700">
 <img src="/images/forth" alt="" width="700">
+=======
+<img src="/images/first.png" alt="" width="700">
+<img src="/images/second.png" alt="" width="700">
+<img src="/images/third.png" alt="" width="700">
+<img src="/images/forth.png" alt="" width="700">
+
+View live site <a href="https://still-beach-39111.herokuapp.com" target="_blank">here</a>
+>>>>>>> 2bd47ec840a0678742baeabe4d0c1715e637272b
