@@ -19,9 +19,11 @@ Use any three digits as CVC and any future date
 for example : 232 as cvc and 02/2022 as expiry date 
 </p>
 
-<b>
-  Note: Any future data will be fine
-</b>
+<p>
+ <b> Note:</b> Any future data will be fine
+</p>
+
+
 
 
 <ol>
