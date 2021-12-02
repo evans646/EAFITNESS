@@ -34,7 +34,7 @@ for example : 232 as cvc and 02/2022 as expiry date
 <img src="/images/first.png" alt="" width="700">
 <img src="/images/second.png" alt="" width="700">
 <img src="/images/third.png" alt="" width="700">
-<img src="/images/forth.png" alt="" width="700">
+<img src="/images/fourth.png" alt="" width="700">
 <img src="/images/fifth.png" alt="" width="700">
 
 
