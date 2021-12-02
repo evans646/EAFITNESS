@@ -55,7 +55,7 @@ def checkout(request):
     except Customer.DoesNotExist:
         pass
 
-    coupons = {'halloween':31, 'welcome':10}
+    coupons = {'halloween':20, 'welcome':10}
 
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])

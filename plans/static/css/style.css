@@ -1,7 +1,12 @@
-body {
+html,body {
     background-color: rgb(246, 236, 224);
     height: 100vh;
+    margin:0;
+    padding:0;
+    
 }
+
+
 
 html {
     font-size: 14px;
@@ -75,8 +80,17 @@ footer {
     background-color: black;
     padding: 5vh;
     color: #fff;
+    margin-bottom:0 !important;
+    bottom: 0 ;
+    position:relative;
+    width:100%;
 }
+/* .footer-wrapper{
+ 
+    position: relative
+} */
+
 .footer-links p{
     display: inline;
-    margin: 10px
+    margin: 13px
 }

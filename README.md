@@ -2,26 +2,36 @@
 <h3>Premium fitness website</h3>
 
 
-<h5>On the home page , you should be able to click on some of articles but some are also premium contents so you will need to activate premium in order to have access to those contents
+<h5>On the home page , you should be able to click on some of articles but some are  premium contents so you will need to activate premium in order to have access to those contents
 </h5>
 <ul>
-    <li>You need to create an account and login in before you can subscribe to a paid membership</li>
+    <li>You need to create an account and login in before you can subscribe to a paid membership/ premium</li>
     <li>Users can use promo codes to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
-    <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle.</li>
+    <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle. eg Yearly/Monthly</li>
 </ul>
-<<<<<<< HEAD
 
-<p>This project also features Django authentication as users needs to be authenticated before they can subscribe to premium features</p>
 
-<img src="/images/first" alt="" width="700">
-<img src="/images/second" alt="" width="700">
-<img src="/images/third" alt="" width="700">
-<img src="/images/forth" alt="" width="700">
-=======
-<img src="/images/first.png" alt="" width="700">
-<img src="/images/second.png" alt="" width="700">
-<img src="/images/third.png" alt="" width="700">
-<img src="/images/forth.png" alt="" width="700">
+<p>This project also features Django authentication as users needs to be Authenticated and Authorization before they can subscribe to premium</p>
+ 
+<p>You can also use sample cards to test payments.
+Use any three digits as CVC and any future date
+
+for example : 232 as cvc and 02/2022 as expiry date 
+</p>
+
+<ol>
+    <li>4242424242424242</li>
+    <li>5555555555554444</li>
+    <li>378282246310005</li>
+   <li>6011111111111117</li>
+   <li>6200000000000005</li>
+</ol>
+
+<img src="/images/first.png" alt="project" width="700">
+<img src="/images/second.png" alt="project"  width="700">
+<img src="/images/third.png" alt="project"  width="700">
+<img src="/images/forth.png" alt="project"  width="700">
+<img src="/images/fifth" alt="project"  width="700">
 
 View live site <a href="https://still-beach-39111.herokuapp.com" target="_blank">here</a>
->>>>>>> 2bd47ec840a0678742baeabe4d0c1715e637272b
+
