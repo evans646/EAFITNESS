@@ -27,7 +27,9 @@ for example : 232 as cvc and 02/2022 as expiry date
    <li>6200000000000005</li>
 </ol>
 
-
+<p>
+  Use any coupons: [Halloween,Welcome, evans]
+</p>
 
 
 
