@@ -6,18 +6,23 @@
 </h5>
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership/ premium</li>
-    <li>Users can use promo codes to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
+    <li>Users can use promo codes/ coupons to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
     <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle. eg Yearly/Monthly</li>
 </ul>
 
 
-<p>This project also features Django authentication as users needs to be Authenticated and Authorization before they can subscribe to premium</p>
+<p>This project also features Django Authentication and Authorization as users needs to be authenticated before they can subscribe to premium</p>
  
 <p>You can  use below sample cards to test payments.
 Use any three digits as CVC and any future date
 
 for example : 232 as cvc and 02/2022 as expiry date 
 </p>
+
+<b>
+  Note: Any future data will be fine
+</b>
+
 
 <ol>
     <li>4242424242424242</li>
@@ -28,7 +33,7 @@ for example : 232 as cvc and 02/2022 as expiry date
 </ol>
 
 <p>
-  Use any coupon: [Halloween,Welcome, evans]
+  Use any coupon: [Halloween,Welcome, Evans]
 </p>
 
 
