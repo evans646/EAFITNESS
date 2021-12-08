@@ -48,14 +48,13 @@ def join(request):
 
 @login_required
 def checkout(request):
-    
     try:
         if request.user.customer.membership:
             return redirect('settings')
     except Customer.DoesNotExist:
         pass
-
-    coupons = {'halloween':20, 'welcome':10,'evans':15}
+#coupons
+    coupons = {'halloween':20, 'welcome':10,'evansreferal':15}
 
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])
@@ -74,6 +73,7 @@ def checkout(request):
         else:
             subscription = stripe.Subscription.create(customer=stripe_customer.id,
             items=[{'plan':plan}])
+            
             #we make a new customer before redirect to home 
 
         customer = Customer()
@@ -108,10 +108,14 @@ def checkout(request):
                 coupon_dollar = str(coupon_price)[:-2] + '.' + str(coupon_price)[-2:]
                 final_dollar = str(price)[:-2] + '.' + str(price)[-2:]
 
+            
         return render(request, 'plans/checkout.html',
         {'plan':plan,'coupon':coupon,'price':price,'og_dollar':og_dollar,
         'coupon_dollar':coupon_dollar,'final_dollar':final_dollar})
+             #mine
+  
 
+        
 def settings(request):
     membership = False
     cancel_at_period_end = False
@@ -144,3 +148,4 @@ class SignUp(generic.CreateView):
         new_user = authenticate(username=username, password=password)
         login(self.request, new_user)
         return valid
+

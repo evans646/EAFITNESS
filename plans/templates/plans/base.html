@@ -17,12 +17,14 @@
       <h5 class="my-0 mr-md-auto font-weight-normal"><a href="{% url 'home' %}"><img src="https://img.icons8.com/ios/50/000000/gum-.png" class=" icon2 "/><b id='nav-brand'>Evans Fitness</b></a></h5>
       <nav class="my-2 my-md-0 mr-md-3">
         {% if user.is_authenticated %}
-     
-        <b><a class="p-2 text-dark">Hi,{{user.username}}</a></b>
+      <b><a class="p-2 text-dark">Hi,{{user.username}}</a></b>
+      <div class="efitness-navlinks">
         <a class="p-2 text-dark link" href="{% url 'join' %}">Premium</a>
         <a class="p-2 text-dark link" href="{% url 'settings' %}">Settings</a>
-        <a class="p-2 text-dark link" href="{% url 'logout' %}">Log Out</a>
-    
+        <span id="link-span">
+        <button class='btn btn-outline-primary nav-btn' ><a class=" text-dark link" href="{% url 'logout' %}">Log Out</a></button>
+        </span>
+      </div>
         {% else %}
         <a class="p-2 text-dark link" href="{% url 'login' %}">Log In</a>
         {% endif %}
@@ -31,7 +33,6 @@
       <a class="btn btn-outline-primary link" href="{% url 'signup' %}">Sign up</a>
       {% endif %}
     </div>
-
     {% block content %}
         {% endblock %}
         {% include "plans/footer.html" %}
