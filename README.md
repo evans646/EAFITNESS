@@ -32,7 +32,7 @@ for example : 232 as cvc and 02/2022 as expiry date
 </ol>
 
 <p>
-  Use any coupon: [Halloween,Welcome, Evans]
+  Use any coupon: [Halloween,Welcome, Evansreferal]
 </p>
 
 <img src="/images/first.png" alt="" width="700">
