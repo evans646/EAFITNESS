@@ -9,8 +9,10 @@
   <a href="{% url 'join' %}"><button class='button-style'>Get Premium</button></a>
 </div>
 
-
-<img src=" {% static '/evansfitness/plans/static/images/traingpic.png' %}" alt="hh">
+<!-- 
+<span>
+  <img src=" {% static '/images/traingpic.png' %}" alt="hh"  id='training-pic' width='300' height="300">
+</span> -->
 <div class="container">
 
   <h3 class='articles-heading'>Trending Articles</h3>
@@ -18,7 +20,6 @@
     {% for plan in plans.all %}
 
     <li><a href="{% url 'plan' plan.id %}">{{ plan.title }}</a></li>
-
     {% endfor %}
   </ul>
 </div>

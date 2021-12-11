@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <link href="{% static 'pricing.css' %}" rel="stylesheet">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/style.css' %}??{% now "U" %}'">
   </head>
   <body>
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
@@ -33,9 +33,9 @@
       <a class="btn btn-outline-primary link" href="{% url 'signup' %}">Sign up</a>
       {% endif %}
     </div>
-    {% block content %}
-        {% endblock %}
-        {% include "plans/footer.html" %}
+    {%block content%}
+    {%endblock%}
+    {% include "plans/footer.html" %}
 </body>
 </html>
 

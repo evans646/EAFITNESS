@@ -1,10 +1,15 @@
-html,body {
-    background-color: rgb(241, 196, 140);
+body {
+    background-color: rgb(236, 212, 184);
     height: 100vh;
     margin:0;
     padding:0;
-    
-}
+};
+
+html {
+    position: relative;
+    min-height: 100%;
+  };
+
 .card,span{
     border-radius: 10px;
 
@@ -140,15 +145,16 @@ a:hover{
 }
 
 footer {
-    background-color: black;
-    padding: 5vh;
+    background-color: rgb(15, 2, 2);
     color: #fff;
     bottom: 0 ;
-    position:absolute;
+    position:fixed;
     width:100%;
+    padding:0;
 }
 
 .footer-links p{
     display: inline;
     margin: 13px
 }
+

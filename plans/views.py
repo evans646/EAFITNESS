@@ -114,7 +114,6 @@ def checkout(request):
         'coupon_dollar':coupon_dollar,'final_dollar':final_dollar})
              #mine
   
-
         
 def settings(request):
     membership = False
