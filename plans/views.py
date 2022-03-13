@@ -109,8 +109,7 @@ def checkout(request):
                 final_dollar = str(price)[:-2] + '.' + str(price)[-2:]
 
             
-        return render(request, 'plans/checkout.html',
-        {'plan':plan,'coupon':coupon,'price':price,'og_dollar':og_dollar,
+        return render(request, 'plans/checkout.html', {'plan':plan,'coupon':coupon,'price':price,'og_dollar':og_dollar,
         'coupon_dollar':coupon_dollar,'final_dollar':final_dollar})
              #mine
   
@@ -125,7 +124,7 @@ def settings(request):
         cancel_at_period_end = True
         subscription.save()
         request.user.customer.save()
-    else:
+    else: 
         try:
             if request.user.customer.membership:
                 membership = True

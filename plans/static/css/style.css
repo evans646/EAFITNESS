@@ -152,7 +152,72 @@ footer {
     width:100%;
     padding:0;
 }
+.not-auth{
+    padding-left:20px
+}
+.not-auth li{
+    display: inline;
+}
+.container {
+    max-width: 960px;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+}
 
+.not-collapsed-nav ul{
+    list-style-type: none
+}
+.not-collapsed-nav li{
+    display: inline;
+}
+.nav-links-wrapper{
+    border-bottom: 2px solid rgb(100, 90, 90);
+    padding: 0;
+}
+.navbar-dark{
+    background-color:#f86b24 !important
+}
+.dumbell-icon{
+    font-size: 15px;
+    color: white;
+    padding: 10px
+}
+ .header-nav-links{
+    list-style: none;
+    width: 100%;
+}
+.header-nav-items{
+   display: inline !important;
+}
+.header-nav-items li{
+    display:inline;
+    padding: 25px
+}
+.header-nav-items a{
+    font-size: 1.5em;
+    display: inline;
+}
+.navbar-toggler{
+    color: white;
+    outline: none !important;
+    padding: 1%;
+    background-color:teal
+}
+.small-navs-wrapper{
+    margin-top: 25px;
+   margin-left: 15%;
+}
+.small-navs-wrapper ul{
+    list-style: none;
+}
+.small-navs-wrapper li{
+    display: inline;
+    padding: 20px;
+    border-right: 1px solid salmon;
+}
+header{
+    background-color:#088853
+}
 .footer-links p{
     display: inline;
     margin: 13px
