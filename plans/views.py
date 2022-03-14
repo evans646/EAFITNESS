@@ -12,6 +12,8 @@ stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53r
 
 
 
+
+
 #only super users can access this account
 @user_passes_test(lambda u: u.is_superuser)
 def updateaccounts(request):
