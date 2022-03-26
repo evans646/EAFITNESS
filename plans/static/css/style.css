@@ -10,7 +10,7 @@
   }
   
 body {
-    background-color: rgb(254, 254, 254);
+    background-color: rgb(254, 254, 254)!important;
     height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -202,9 +202,8 @@ a:hover{
 /* header-styles */
 
 header{
-    background-color:#088853;
+    background-color:#088853
 }
-
 
 .footer-links p{
     display: inline;
