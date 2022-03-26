@@ -27,6 +27,14 @@ color: black;
 } */
 
 
+nav.efitness-navlinks a:hover{
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
 
 @media (min-width: 768px) {
     html {
@@ -92,14 +100,14 @@ a:hover{
     -o-transform: translateY(-0.25em);
 }
 
-/* footer {
+footer {
     background-color: rgb(15, 2, 2);
     color: #fff;
     bottom: 0 ;
-    position:relative;
+    position:fixed;
     width:100%;
     padding:0;
-} */
+}
 .not-auth{
     padding-left:20px
 }
@@ -136,36 +144,29 @@ a:hover{
 }
 .header-nav-items li{
     display:inline;
-    padding: 10px 10px;
+    padding: 25px
 }
 .header-nav-items a{
     font-size: 1.5em;
     display: inline;
-    text-decoration: none;
 }
-.header-nav-items img{
-  margin-right: 5px;
-  margin-top: 10px;
+.navbar-toggler{
+    color: white;
+    outline: none !important;
+    padding: 1%;
+    background-color:teal
 }
-.header-icons{
-  margin-top: 10px;
-  margin-right: 5px;
-}
-
 .small-navs-wrapper{
-   margin-top: 25px;
-   margin-left: 10%;
+    margin-top: 25px;
+   margin-left: 15%;
 }
 .small-navs-wrapper ul{
     list-style: none;
 }
 .small-navs-wrapper li{
     display: inline;
-    padding: 15px;
-
-}
-.small-navs-wrapper a{
-  text-decoration: none;
+    padding: 20px;
+    border-right: 1px solid salmon;
 }
 header{
     background-color:#088853
