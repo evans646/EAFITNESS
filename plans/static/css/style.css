@@ -199,9 +199,13 @@ a:hover{
 .small-navs-wrapper a{
   text-decoration: none;
 }
+/* header-styles */
+
 header{
-    background-color:#088853
+    background-color:#088853;
 }
+
+
 .footer-links p{
     display: inline;
     margin: 13px
