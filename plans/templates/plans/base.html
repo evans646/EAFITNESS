@@ -28,6 +28,10 @@
         {% else %}
         <a class="p-2 text-dark link" href="{% url 'login' %}">Log In</a>
         
+
+
+
+        I will make account navlink with dropdown of the logi-out and settings 
         {% endif %} -->
 
         <header>
@@ -35,7 +39,7 @@
             <div class="pb-3">
               {% if user.is_authenticated %}
             <span class="user-logged">
-              <i class="fa fa-user"></i><a class="p-2 text-white" style="text-decoration:'none">Hi,{{user.username}}</a>
+              <a class="p-2 text-white"><img  src="{% static 'user.png' %}" width='20'/>Hi,{{user.username}}</a>
             </span>
               {%else%}
               <a class="p-2 text-white"><img  src="{% static 'user.png' %}" width='20'/> Not signed in</a>
@@ -49,7 +53,7 @@
                     <ul class="header-nav-links">
                       <div class="header-nav-items">
                         <li><a href="" class="text-white"><img class="header-icons" src="{% static 'gym.png' %}" width='40'/>FITNESS</a></li>
-                        <li><FOOD href="#" class="text-white"><img  src="{% static 'food.png' %}" width='40'/>FOOD</a></li>
+                        <li><a href="#" class="text-white"><img  src="{% static 'food.png' %}" width='40'/>FOOD</a></li>
                         <li><a href="#" class="text-white"><img  src="{% static 'heartbeat .png' %}" width='40'/>HEALTH</a></li>
                         <li><a href="#" class="text-white"><img  src="{% static 'love.png' %}" width='40'/>LOVE</a></li>
                         <li><a href="#" class="text-white"><img  src="{% static 'beauty.png' %}" width='40'/>BEAUTY</a></li>
@@ -64,7 +68,7 @@
                         <li><a href="#" class="text-white">Spring Challenge</a> <img  src="{% static 'divider.png' %}" width='40'/></li>
                         <li><a href="#" class="text-white">Workout</a> <img  src="{% static 'divider.png' %}" width='40'/></li>
                         <li><a href="#" class="text-white">Blog</a> <img  src="{% static 'divider.png' %}" width='40'/></li>
-                        <li><a href="#" class="text-white">Premium</a></li>
+                        <li><a  href="{% url 'join' %}" class="text-white">Premium</a></li>
                       </ul>
                     </div>
                 </div>
@@ -73,17 +77,12 @@
           </div>
           <div class="navbar navbar-dark bg-dark box-shadow fixed ">
             <div class="container d-flex justify-content-between">
-             
-           <a href="/" class="home">
-            <h2>EA FITNESS</h2>
-           </a>
-           <!-- <nav>
-            <h3>  <a href="#" class="text-white"><i class="fa-solid fa-arrow-right-to-bracket"></i> Sign up</a></h3>
-           </nav> -->
-           <nav class="my-2 my-md-0 mr-md-3">
+              
+           <a href="/" class="home" style="margin-top: 2.5% !important;margin-right:'5%' " ><h2>EA FITNESS</h2> </a>
             {% if user.is_authenticated %}
-          <div class="efitness-navlinks">
-           <nav class="not-collapsed-nav fixed-top">
+        <div class="efitness-navlinks" style="margin-top: 2.5% !important;">
+          <nav class="not-collapsed-nav">
+           <div class="nav-links">
             <ul>
               <li>
                <a class="p-2 text-dark link" href="{% url 'join' %}">Premium</a>
@@ -108,6 +107,7 @@
               <i class="fa fa-arrow-right-to-bracket"></i> <a  href="{% url 'signup' %}">Sign up</a>
             </li>
           </ul>
+           </div>
          </div>
             {% endif %} 
        </nav>

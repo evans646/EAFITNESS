@@ -5,6 +5,8 @@ from django.db.models.fields.related import OneToOneField
 class FitnessPlan(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
+    summary = models.TextField(default='')
+    image = models.ImageField(upload_to ='uploads/',default=True)
     premium = models.BooleanField(default=True)
 
     def __str__(self):
