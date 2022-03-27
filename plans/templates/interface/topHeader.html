@@ -4,10 +4,13 @@
       <div class="pb-0">
         {% if user.is_authenticated %}
       <span class="user-logged">
-        <a class=" text-white"><img  src="{% static 'user.png' %}" width='20' height='20'/>Hi,{{user.username}}</a>
+        <a class=" text-white"><img  src="{% static 'user-loggedin.png' %}" width='20' height='20'/>Hi, {{user.username}}</a>
       </span>
         {%else%}
-        <a class="p-2 text-white"><img  src="{% static 'user.png' %}" width='20'/> Not signed in</a>
+        <span class="user-logged">
+          <a class="p-2 text-white"><img  src="{% static 'user.png' %}" width='20'/> Not signed in</a>
+        </span>
+       
         {%endif%}
       </div>
       <div class="container">
@@ -28,8 +31,8 @@
               <hr>
               <div class="small-navs-wrapper">
                 <ul>
-                  <li><a href="{% url 'blog' %}" class="text-white">Blog</a><img  src="{% static 'divider.png' %}" width='40'/></li>
-                  <li><a  href="{% url 'join' %}" class="text-white" style=" margin-right:5%;">Premium</a></li>
+                  <li><a href="{% url 'blog' %}" class="text-white small-nave-item">Blog</a><img  src="{% static 'divider.png' %}" width='40'/></li>
+                  <li><a  href="{% url 'join' %}" class="text-white small-nave-item" style=" margin-right:5%;">Premium</a></li>
                 </ul>
               </div>
           </div>

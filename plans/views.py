@@ -37,6 +37,11 @@ def home(request):
 def blog(request):
     blogs = Blog.objects
     return render(request,'interface/blogPage.html',{'blogs':blogs})
+    
+@login_required
+def blogdetail(request, blog_id):
+    blog_detail = get_object_or_404(Blog, pk=blog_id) #every model in the db has a pk(primary key)
+    return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
 
 def workout(request):
     return render(request,'interface/workoutPage.html')

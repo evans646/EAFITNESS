@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 :root {
     --footer-bg: #2e3d78;
     --color: #f2f3fb;
@@ -19,15 +21,22 @@ body {
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
     margin: 0;
     padding: 0;
     overflow-x: hidden !important;
+    /* font-family: 'Kaushan Script', cursive; */
+    font-family: 'Righteous', cursive;
 };
 
 html {
     position: relative;
     min-height: 100%;
   };
+
+  a:hover {
+    text-decoration: none !important;
+  }
 
  .small-navs-wrapper ul{
     list-style: none;
@@ -37,121 +46,34 @@ html {
 .small-navs-wrapper li{
     display: inline;
 }
+.small-nav-item:hover{
+  border-bottom: #f86b24 !important;
+}
 .small-navs-wrapper  img{
   padding:0;
   margin-left: 1%;
 }
 
-/* 
-@media (min-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-img{
-    height:8vh;
-}
-li a{
-    font-size:1.2rem
-}
-
-b{
-    color: #f86b24;
-    font-size:1.2em;
-    margin-top: 10px;
-    text-decoration: none;
-    padding-right: 10px;
-}
-.link{
-    font-size:1.2em;
-}
-
-  /* .container a{
-    color: #068359;
-} */
-   /* a{
-    color: #068359 !important;
-}
-
-a:hover{
-    text-decoration: none !important;
-}
-
-.icon{
-    color: aqua;
-    margin-left:20px
-}
-
-.button-style {
-    background: none;
-    color: #f86b24;
-    background-color: rgba(0, 0, 0, 0.93);
-    border: 2px solid;
-    padding: 1em 2em;
-    border-radius:7px;
-    font-size: 1em;
-    transition: color 0.25s, border-color 0.25s, box-shadow 0.25s,transform 0.25s;
-    -webkit-border-radius:7px;
-    -moz-border-radius:7px;
-    -ms-border-radius:7px;
-    -o-border-radius:7px;
-}
-  
-.button-style:hover {
-    border-color: #f1ff5c;
-    color: white;
-    box-shadow: 0 0.5em 0.5em -0.4em #98ff5c;
-    transform: translateY(-0.25em);
-    cursor: pointer;
-    -webkit-transform: translateY(-0.25em);
-    -moz-transform: translateY(-0.25em);
-    -ms-transform: translateY(-0.25em);
-    -o-transform: translateY(-0.25em);
-} */ 
-
-/* footer {
-    background-color: rgb(15, 2, 2);
-    color: #fff;
-    bottom: 0 ;
-    position:relative;
-    width:100%;
-    padding:0;
-} */
-/* .not-auth{
-    padding-left:20px
-}
-.not-auth li{
-    display: inline;
-}
 .container {
-    max-width: 960px;
-    margin-bottom: 0 ;
-    padding-bottom: 15px;
-} */
+  max-width: 960px;
+  margin-bottom: 0 ;
+  padding-bottom: 15px;
+} 
+.login-signup-links {
+  padding-left:20px;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-decoration: none!important;
+}
 
-/* .not-collapsed-nav li{
-    display: inline;
+.login-signup-links li{
+  display: inline;
+  padding-left:20px
 }
-.nav-links-wrapper{
-    border-bottom: 2px solid rgb(100, 90, 90);
-    padding: 0;
-}
+
 .navbar-dark{
-    background-color:#f86b24 !important
-} */
-/* .dumbell-icon{
-    font-size: 15px;
-    color: white;
-    padding: 10px
-} */
- /* 
- */
- /* .header-icons{
-  margin-top: 10px;
-  margin-right: 5px;
-} */
-
+  background-color:#f86b24 !important
+} 
 .header-nav-items li{
   display:inline;
   padding: 15px 5px;
@@ -224,12 +146,12 @@ h5{
 footer {
     font-size: 16px;
     background: var(--footer-bg);
-    padding: 2em 4em;
+    padding: 1em 4em;
     display: flex;
     align-items: start;
     justify-content: center;
     gap: 1em;
-    font-family: "IBM Plex Sans", sans-serif;
+    font-family: 'Righteous', cursive;
   }
   
   footer ul {
@@ -241,12 +163,12 @@ footer {
   }
   
   .col-title {
-    font-family: "Merriweather", serif;
+    font-family: 'Righteous', cursive;
     font-weight: bold;
     color: var(--color);
     font-size: 1.1em;
     font-weight: 500;
-    padding: 0.5em 0;
+    padding: 0.2em 0;
     margin-left: 15% !important;
   }
   
@@ -361,3 +283,125 @@ footer {
     }
   }
   
+
+
+
+
+
+
+
+
+
+
+a{
+  color: #068359 !important;
+}
+a:hover{
+  text-decoration: none !important;
+}
+
+
+.triangle {
+position: absolute;
+width: 0;
+height: 0;
+border-top: 28vh solid #ff4081;
+border-right: 40vw solid transparent;
+opacity: 0.90;
+z-index: -1;
+transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+.triangle-2 {
+position: absolute;
+width: 0;
+height: 0;
+border-top: 25vh solid #cecdfe;
+border-right: 75vw solid transparent;
+opacity: 0.90;
+z-index: -2;
+transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+.triangle-3 {
+position: absolute;
+display: block;
+right: 0;
+width: 0;
+height: 0;
+border-top: 25vh solid #4b007d;
+border-left: 75vw solid transparent;
+opacity: 0.90;
+z-index: -3;
+transition: all 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+.t-container {
+position: relative;
+top: 20vh;
+padding: 50px 1em;
+max-width: 1000px;
+margin: 0 auto;
+z-index: 100;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+.triangle {
+  border-top: 120vh solid #ff4081;
+  border-right: 35vw solid transparent;
+}
+.triangle-2 {
+  border-top: 120vh solid #cecdfe;
+  border-right: 40vw solid transparent;
+}
+.triangle-3 {
+  display: none;
+}
+.container {
+  top: 10vh;
+}
+}
+
+
+article {
+max-width: 700px;
+margin: 0 auto;
+z-index: 100;
+}
+article h1 {
+font-family: 'Merriweather';
+font-weight: 700;
+font-size: 3.5rem;
+color: #202020;
+margin-bottom: 0.25em;
+text-align: center;
+}
+article .metadata {
+margin-bottom: 1em;
+}
+article span {
+font-family: Merriweather;
+font-size: 1em;
+font-weight: 400;
+display: block;
+color: #828385;
+text-align: center;
+margin-bottom: 0.250em
+}
+article p {
+font-family: 'PT Sans';
+font-weight: 400;
+font-size: 1.150em;
+line-height: 1.4;
+color: #363636;
+margin-bottom: 1.1635em;
+letter-spacing: -0.0040em;
+padding: 0.50em;
+}
+
+@media only screen and (min-width: 768px) {
+article p {
+  font-size: 1.30em;
+}
+}

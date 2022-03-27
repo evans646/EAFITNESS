@@ -3,11 +3,11 @@
 <section>
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container-fluid d-flex justify-content-between">
-          <a href="/" class="home" style="margin-top: 0.5% !important; " ><h2>EA FITNESS</h2> </a>
+          <a href="/" class="home" style="margin-top: 0.5% !important; color: black !important; text-decoration:'none'" ><h2>EA FITNESS</h2> </a>
             {% if user.is_authenticated %}
         <div class="efitness-navlinks" style="margin-top: 0.5% !important;">
           <nav class="not-collapsed-nav">
-           <div class="nav-links">
+           <div class="login-signup-links">
             <ul>
               <li>
                <a class="p-2 text-dark link" href="{% url 'join' %}">About</a>
@@ -22,7 +22,7 @@
               </ul>
           </div>
             {% else %}
-         <div class="not-auth">
+         <div class="login-signup-links">
           <ul class="list-unstyled">
             <li> 
               <a class="p-2 text-dark link" href="{% url 'login' %}"> <i class="fa fa-user"></i> Sign In</a>

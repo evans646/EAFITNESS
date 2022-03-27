@@ -36,6 +36,9 @@
   padding: 10px;
   overflow: auto;
 }
+#blog-container a{
+  color: rgb(0, 0, 0)!important
+}
 
 #blog-container  li:hover {
   background: #eee;
@@ -60,10 +63,12 @@
     {%for blog in blogs.all%}
     <ul>
       <li>
-        <img src="{{ blog.image}}" width='200'/>
-        <h3>{{blog.title}}</h3>
-        <p>{{blog.summary}}</p>
-        <small>{{blog.date}}</small>
+        <a href="{%url 'blogdetail' blog.id %}">
+          <img src="{{ blog.image}}" width='200'/>
+          <h3>{{blog.title}}</h3>
+          <p>{{blog.summary}}</p>
+          <small class="text-muted">{{blog.date}}</small>
+        </a>
       </li>
     </ul>
     {%endfor%}

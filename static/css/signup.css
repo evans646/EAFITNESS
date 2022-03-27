@@ -10,10 +10,10 @@
     flex-direction: column;
   }
   
-  .login-page-container {
-    position: relative;
+   .signUp-page-container {
+    position: relative; 
     width: 100%;
-    max-width: 600px;
+     max-width: 700px;
     height: auto;
     display: flex;
     background: #ffffff;
@@ -29,7 +29,7 @@
     font-size: 16px;
     font-weight: 400;
   }
-  
+   
   .credit a {
     color: #222222;
     font-size: 16px;
@@ -63,13 +63,13 @@
     border-radius: 5px;
     color: #ffffff;
     outline: none;
-    border: 1px solid #ffffff;
+    background-color:  #ffffff;
     transition: .3s;
     -webkit-transition: .3s;
   }
   
   .btn:hover {
-    color: #4CAF50;
+    color: #068359 ;
     background: #ffffff;
   }
   
@@ -82,7 +82,7 @@
   
   .col-left {
     width: 45%;
-    background: #4CAF50;
+    background:#068359 ;
     -webkit-clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
     clip-path: polygon(98% 17%, 100% 34%, 98% 51%, 100% 68%, 98% 84%, 100% 100%, 0 100%, 0 0, 100% 0);
   }
@@ -121,7 +121,7 @@
   }
   
   .login-form p a {
-    color: #4CAF50;
+    color: #068359 ;
     font-size: 14px;
     text-decoration: none;
   }
@@ -160,20 +160,18 @@
   }
   
   .login-form input:focus {
-    border-color: #4ee2ff;
+    border-color: #ff574e;
   }
   
   .login-form input.btn {
     color: #ffffff;
-    background: #4CAF50;
-    border-color: #4CAF50;
+    background: #068359 ;
+    border-color: #068359 ;
     outline: none;
     cursor: pointer;
   }
   
   .login-form input.btn:hover {
-    color: #4CAF50;
+    color: #068359 ;
     background: #ffffff;
-  }
-
-  
+  } 

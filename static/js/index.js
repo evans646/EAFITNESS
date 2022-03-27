@@ -12,7 +12,6 @@ $(function(){
     "margin":"0%",
    "margin-left": "35%"
   })
-  
 
   const userNameOnDisplay = $('.user-logged');
   userNameOnDisplay.css({
