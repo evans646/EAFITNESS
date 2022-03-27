@@ -1,0 +1,74 @@
+{% extends 'plans/base.html' %}
+{%block content%}
+{% load static %}
+<!-- {% include "interface/carosel.html" %} -->
+<style>
+  
+#blog-container{
+		margin: 5% auto;
+		min-width: 200px;
+		max-width: 800px;
+}
+
+#blog-container ul {
+  list-style-type: none;
+  width: 800px;
+  padding:10px;
+}
+
+
+#blog-container h3 {
+  font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+
+#blog-container img {
+  float: left;
+  margin: 0 15px 0 0;
+  height: 5% !important;
+}
+
+
+#blog-container li p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+#blog-container  li {
+  padding: 10px;
+  overflow: auto;
+}
+
+#blog-container  li:hover {
+  background: #eee;
+  cursor: pointer;
+}
+.blog-heading{
+  padding-top: 3%;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+</style>
+
+
+<h1 class="text-center blog-heading">Latest blogs</h1>
+<p class="lead text-center">
+     Read out latest blogs on how to get fit and imporve your life substantially because we <br>
+  have so many things to do that we fortget that we are in trhe same race ad do this at teh same time 
+</p>
+
+<div class='container-fluid' id='blog-container'>
+    {%for blog in blogs.all%}
+    <ul>
+      <li>
+        <img src="{{ blog.image}}" width='200'/>
+        <h3>{{blog.title}}</h3>
+        <p>{{blog.summary}}</p>
+        <small>{{blog.date}}</small>
+      </li>
+    </ul>
+    {%endfor%}
+    </div>
+{%endblock%}
+
+
+

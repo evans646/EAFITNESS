@@ -3,7 +3,7 @@ from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import FitnessPlan,Customer
+from .models import FitnessPlan,Customer,Blog
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
@@ -28,9 +28,24 @@ def updateaccounts(request):
         customer.save()
     return HttpResponse('completed')
 
+
+
 def home(request):
     plans = FitnessPlan.objects
     return render(request, 'plans/home.html', {'plans':plans})
+
+def blog(request):
+    blogs = Blog.objects
+    return render(request,'interface/blogPage.html',{'blogs':blogs})
+
+def workout(request):
+    return render(request,'interface/workoutPage.html')
+
+def video(request):
+    return render(request,'interface/videoPage.html')
+
+def springchallenge(request):
+    return render(request,'interface/springChallenge.html')
 
 def plan(request,pk):
     plan = get_object_or_404(FitnessPlan, pk=pk)

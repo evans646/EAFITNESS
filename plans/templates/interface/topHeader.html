@@ -1,0 +1,40 @@
+{% load static %}
+<header >
+    <div class=" bg-dark" >
+      <div class="pb-0">
+        {% if user.is_authenticated %}
+      <span class="user-logged">
+        <a class=" text-white"><img  src="{% static 'user.png' %}" width='20' height='20'/>Hi,{{user.username}}</a>
+      </span>
+        {%else%}
+        <a class="p-2 text-white"><img  src="{% static 'user.png' %}" width='20'/> Not signed in</a>
+        {%endif%}
+      </div>
+      <div class="container">
+        <div>
+          <div class="pt-3" id="nav">
+            <div class="nav-links-wrapper">
+              <ul class="header-nav-links">
+                <div class="header-nav-items">
+                  <li><a href="" class="text-white"><img  class="header-icons" src="{% static 'gym.png' %}" width='40'/>FITNESS</a></li>
+                  <li><a href="#" class="text-white"><img  src="{% static 'food.png' %}" width='40'/>FOOD</a></li>
+                  <li><a href="#" class="text-white"><img  src="{% static 'heartbeat .png' %}" width='40'/>HEALTH</a></li>
+                  <li><a href="#" class="text-white"><img  src="{% static 'love.png' %}" width='40'/>LOVE</a></li>
+                  <li><a href="#" class="text-white"><img  src="{% static 'beauty.png' %}" width='40'/>BEAUTY</a></li>
+                  <li><a href="#" class="text-white"><img  src="{% static 'culture.png' %}" width='40'/>CULTURE</a></li>
+                </div>
+               </ul>
+              </div>
+              <hr>
+              <div class="small-navs-wrapper">
+                <ul>
+                  <li><a href="{% url 'blog' %}" class="text-white">Blog</a><img  src="{% static 'divider.png' %}" width='40'/></li>
+                  <li><a  href="{% url 'join' %}" class="text-white" style=" margin-right:5%;">Premium</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+

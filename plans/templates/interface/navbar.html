@@ -1,0 +1,41 @@
+{% include "interface/topHeader.html" %}
+
+<section>
+    <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container-fluid d-flex justify-content-between">
+          <a href="/" class="home" style="margin-top: 0.5% !important; " ><h2>EA FITNESS</h2> </a>
+            {% if user.is_authenticated %}
+        <div class="efitness-navlinks" style="margin-top: 0.5% !important;">
+          <nav class="not-collapsed-nav">
+           <div class="nav-links">
+            <ul>
+              <li>
+               <a class="p-2 text-dark link" href="{% url 'join' %}">About</a>
+              </li>
+              <li>
+               <a class="p-2 text-dark link" href="{% url 'settings' %}">Settings</a>
+              </li>
+          
+               <li>
+                <a class="p-2 text-dark link" href="{% url 'logout' %}"><i class="fa fa-arrow-right-to-bracket"></i> Log Out</a>
+               </li>
+              </ul>
+          </div>
+            {% else %}
+         <div class="not-auth">
+          <ul class="list-unstyled">
+            <li> 
+              <a class="p-2 text-dark link" href="{% url 'login' %}"> <i class="fa fa-user"></i> Sign In</a>
+            </li>
+
+            <li>
+              <i class="fa fa-arrow-right-to-bracket"></i> <a  href="{% url 'signup' %}">Sign up</a>
+            </li>
+          </ul>
+           </div>
+         </div>
+            {% endif %} 
+       </nav>
+            </div>
+          </div>
+  </section> 
