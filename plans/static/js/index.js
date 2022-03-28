@@ -1,4 +1,5 @@
 $(function(){
+  
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50 ) {
         $('.scrolltop:hidden').stop(true, true).fadeIn();
@@ -6,11 +7,8 @@ $(function(){
         $('.scrolltop').stop(true, true).fadeOut();
     }
 });
-$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:parseInt($(".thetop")).offset().top},"1000");return false})})
+$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset() -100},"3000");return false})})
 
-// .animate({scrollTop:100}, 500, 'offset', function() { 
-//   return false
-// });
 
    $('hr').css({
        "background-color": "#f86b24",
@@ -22,9 +20,15 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:par
 
    smallHeaderNav.css({
     "margin":"0%",
-   "margin-left": "35%"
+   "margin-left": "35%",
+   "font-size":"12px"
   })
   
+  const smallHeaderNavLinks= $('.small-nav-item  ');
+
+smallHeaderNavLinks.css({
+  "font-size":"3e"
+})
 
   const userNameOnDisplay = $('.user-logged');
   userNameOnDisplay.css({

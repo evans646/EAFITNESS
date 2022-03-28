@@ -1,4 +1,8 @@
 {% extends 'plans/base.html' %}
+
+
+
+
 {% block content %}
 <div class="wrapper p-5" >
   <div class="signUp-page-container">
@@ -17,9 +21,8 @@
         <form  method="post">
           {% csrf_token %}
           {{ form.as_p }}
-          <p>
-            <input class="btn" type="submit" value="Sing Up" />
-          </p>
+          <button type="submit" >Sign up</button>
+       
           <p>
             <a href="">Forget password?</a>
             <a href="">Create an account.</a>
@@ -29,16 +32,4 @@
     </div>
   </div>
 </div>
-{% endblock %}
-{% include "../plans/footer.html" %}
-
-
-
-<!-- <div class="container form-wrapper">
-  <h2 class="text-center mb-5">Sign up</h2>
-    <form method="post">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" class="btn btn-success">Sign up</button>
-    </form>
-  </div> -->
+{% endblock %} 

@@ -31,6 +31,15 @@ SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 DEBUG =True
 SITE_ID = 2
 
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER ='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' # this is exactly the value 'apikey'
+# EMAIL_HOST_PASSWORD =1122
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+
+
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
 
 LOGIN_URL='login'
