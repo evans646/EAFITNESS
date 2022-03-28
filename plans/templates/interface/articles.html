@@ -5,19 +5,21 @@
   <div class="container-fluid main">
       <div class="row">
         {% for plan in plans.all %}
-        <div class="col-md-4">
+        <div class="col-md-4 ">
           <div class="main">
               <ul class="cards">
-                <li class="cards_item">
-                  <div class="card">
-                    <div class="card_image"><img  src="{{ plan.image.url}}"></div>
-                    <div class="card_content">
-                      <h2 class="card_title">{{plan.title}}</h2>
-                      <p class="card_text">{{plan.summary}}</p>
-                      <button class="btn card_btn">Read More</button>
+                <!-- <a href="{% url 'plan' plan.id %}"> -->
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img  src="{{ plan.image.url}}"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">{{plan.title}}</h2>
+                        <p class="card_text">{{plan.summary}}</p>
+                       <button class="btn card_btn">Read More</button>
+                      </div>
                     </div>
-                  </div>
-                </li>
+                  </li>
+                <!-- </a> -->
               </ul>
             </div>
         </div>

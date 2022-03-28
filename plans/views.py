@@ -31,6 +31,7 @@ def updateaccounts(request):
 
 def home(request):
     plans = FitnessPlan.objects
+    print(plan)
     return render(request, 'plans/home.html', {'plans':plans})
 
 def blog(request):
@@ -75,7 +76,7 @@ def checkout(request):
     except Customer.DoesNotExist:
         pass
 #coupons
-    coupons = {'halloween':20, 'welcome':10,'evansreferal':15}
+    coupons = {'halloween':15, 'welcome':10,'evansreferal':20}
 
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])

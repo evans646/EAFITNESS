@@ -38,6 +38,60 @@ body {
     text-decoration: none !important;
   }
 
+
+  /* scroll-top */
+
+  .thetop{
+  top: 100px;
+}
+  .scrolltop {
+    display:none;
+    width:100%;
+    margin:0 auto;
+    position:fixed;
+    bottom:20px;
+    right:10px;	
+    transition: 0.9s;
+    -moz-transition: 0.9s;
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s; 	
+  }
+  .scroll {
+    position:absolute;
+    right:20px;
+    bottom:20px;
+    background:#f86b24;
+    background:#f86b24;
+    padding:20px;
+    text-align: center;
+    margin: 0 0 0 0;
+    cursor:pointer;
+    transition: 0.9s;
+    -moz-transition: 0.9s;
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s; 		
+  }
+  .scroll:hover {
+    background:#068359;
+    transition: 0.5s;
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s; 		
+  }
+  .scroll:hover .fa {
+    padding-top:-10px;
+  }
+  .scroll .fa {
+    font-size:30px;
+    margin-top:-5px;
+    margin-left:1px;
+    transition: 0.9s;
+    -moz-transition: 0.9s;
+    -webkit-transition: 0.9s;
+    -o-transition: 0.9s; 	
+  }
+
+
  .small-navs-wrapper ul{
     list-style: none;
     margin-right:  50px !important;
@@ -116,6 +170,11 @@ body {
     line-height: 2;
 }
 
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 
 .carousel .carousel-item {
     height: 600px;
@@ -134,6 +193,10 @@ body {
       top: 0;
       left: 0;
   }
+
+  .carousel-control {
+    color: red;
+}
 
 h5{
     font-family: 'Kaushan Script', cursive;
@@ -283,12 +346,6 @@ footer {
     }
   }
   
-
-
-
-
-
-
 
 
 

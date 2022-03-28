@@ -1,5 +1,17 @@
-
 $(function(){
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 50 ) {
+        $('.scrolltop:hidden').stop(true, true).fadeIn();
+    } else {
+        $('.scrolltop').stop(true, true).fadeOut();
+    }
+});
+$(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:parseInt($(".thetop")).offset().top},"1000");return false})})
+
+// .animate({scrollTop:100}, 500, 'offset', function() { 
+//   return false
+// });
+
    $('hr').css({
        "background-color": "#f86b24",
         "width":"80%",
@@ -27,4 +39,4 @@ $(function(){
   })
 
    });
-   
+
