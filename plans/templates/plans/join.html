@@ -8,7 +8,7 @@ text-decoration: none;
 
 .purchase {
 /* border-top:11px solid #E85700; */
-padding:10px 0 0;
+padding:2px 0 0;
 text-align:center;
 /* font-family: "Lato"; */
 }
@@ -26,7 +26,7 @@ margin:0 auto;
 }
 .purchase-trigger {
 margin-top:50px;
-border:1px solid #E85700;
+border:1px solid #f86b24;
 border-radius:50px;
 font-size:26px;
 display:inline-block;
@@ -54,13 +54,13 @@ user-select: none;
 }
 .purchase-trigger span {
 padding:17px 80px;	
-color:#E85700;
+color:#f86b24;
 width:246px;
 display: inline-block;
 }
 .purchase-trigger .bubble {
 position:absolute;
-background:#E85700;
+background:#f86b24;
 top:0;
 border-radius:50px;
 left:0;
@@ -114,9 +114,7 @@ left:-1px;
 box-shadow: 0 13px 48px rgba(0, 0, 0, 0.2);
 z-index:1;
 color:#fff;
-background:#E85700;
-border-color:#E85700;
--webkit-transform:scale(1.05);
+background:#f86b24;
 }
 
 .purchase li * {
@@ -181,7 +179,7 @@ transition: 0;
 
 
 .purchase ul a:hover {
-color:#E85700;
+color:#f86b24;
 }
 
 .purchase ul a, .purchase ul a:hover .purchase-price, .purchase ul a:hover .purchase-description {
@@ -233,7 +231,7 @@ color:#6C6C6C;
   <div class="container">
     <ul>
       <li>
-        <a href="/startup-wordpress/?add-to-cart=121014">
+        <a  href="{%url 'checkout'%}?plan=monthly">
           <strong>Monthly</strong>
           <span class="purchase-description">Detailed Workout Plans</span>
           <span class="purchase-description">Detailed Workout Plans</span>
@@ -241,11 +239,11 @@ color:#6C6C6C;
           <span class="purchase-description">Scientific Studies Breakdown</span>
           <span class="purchase-description">6 Months Email Support</span>
           <big class="purchase-price">$10 <small class="text-muted">/ mo</small></big>
-          <button  type="button" class="purchase-button"><a href="{%url 'checkout'%}?plan=monthly">Buy Now</a></button>
+          <button  type="button" class="purchase-button"style="background-color:#252129 "><a href="{%url 'checkout'%}?plan=monthly">Buy Now</a></button>
         </a>
       </li>
       <li>
-        <a href="/startup-wordpress/?add-to-cart=121020">
+        <a  href="{%url 'checkout'%}?plan=yearly">
           <strong>Yearly<span> Save $20!</span></strong>
           <span class="purchase-description">Detailed Workout Plans</span>
           <span class="purchase-description">Weekly Members Only Email</span>
@@ -253,7 +251,7 @@ color:#6C6C6C;
           <span class="purchase-description">Scientific Studies Breakdown</span>
           <span class="purchase-description">1 Year Email Support</span>
           <big class="purchase-price">$100 <small class="text-muted">/yr</small></big>
-        <button  type="button" class="purchase-button"><a href="{%url 'checkout'%}?plan=yearly">Buy Now</a></button>
+        <button  type="button" class="purchase-button" style="background-color:#252129"><a href="{%url 'checkout'%}?plan=yearly">Buy Now</a></button>
         </a>
       </li>
       <!-- <li>
