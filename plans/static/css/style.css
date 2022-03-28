@@ -28,12 +28,12 @@ body {
     /* font-family: 'Kaushan Script', cursive; */
     font-family: 'Righteous', cursive;
 };
-
-html {
+  
+  html { 
+    scroll-behavior: smooth; 
     position: relative;
     min-height: 100%;
-  };
-
+  }
   a:hover {
     text-decoration: none !important;
   }

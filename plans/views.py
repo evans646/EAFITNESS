@@ -29,7 +29,6 @@ def updateaccounts(request):
     return HttpResponse('completed')
 
 
-
 def home(request):
     plans = FitnessPlan.objects
     return render(request, 'plans/home.html', {'plans':plans})
