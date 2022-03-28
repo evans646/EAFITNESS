@@ -64,7 +64,7 @@
     <ul>
       <li>
         <a href="{%url 'blogdetail' blog.id %}">
-          <img src="{{ blog.image}}" width='200'/>
+          <img src="{{ blog.image.url}}" width='200'/>
           <h3>{{blog.title}}</h3>
           <p>{{blog.summary}}</p>
           <small class="text-muted">{{blog.date}}</small>

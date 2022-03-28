@@ -2,12 +2,14 @@ from email.mime import image
 from django.db import models
 from django.contrib.auth.models import User
 from django.db.models.fields.related import OneToOneField
+from cloudinary.models import CloudinaryField
 
 class FitnessPlan(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     summary = models.TextField(default='')
-    image = models.ImageField(upload_to ='uploads/',default=True)
+    # image = models.ImageField(upload_to ='uploads/',default=True)
+    image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
 
     def __str__(self):
@@ -27,7 +29,8 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     summary = models.TextField()
-    image = models.ImageField()
+    # image = models.ImageField()
+    image = CloudinaryField('image')
     date = models.DateTimeField()
 
     def __str__(self):
