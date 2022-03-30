@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -15,7 +15,7 @@
 
 
 body {
-    background-color: rgb(254, 254, 254)!important;
+    background-color: rgb(254, 251, 251)!important;
     height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
@@ -37,9 +37,22 @@ body {
     text-decoration: none !important;
   }
 
+  .shadow{
+    font-family:Mr Dafoe, sans-serif;
+    font-size:4em;
+    text-align:center;
+    text-shadow: 0 -3px 0 #333,
+      0 6px 8px rgba(0,0,0,.4),
+      0 9px 10px rgba(0,0,0,.15),
+      0 30px 10px rgba(0,0,0,.18),
+      0 15px 10px rgba(0,0,0,.21);
+
+  }
+  div.shadow{
+    margin-left:100%
+  }
 
   /* scroll-top */
-
   .scrolltop {
     display:none;
     width:100%;
@@ -462,3 +475,4 @@ article p {
   font-size: 1.30em;
 }
 }
+
