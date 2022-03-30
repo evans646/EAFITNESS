@@ -1,9 +1,12 @@
 {% include "interface/topHeader.html" %}
+{% load static %}
 
 <section>
     <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container-fluid d-flex justify-content-between">
-          <a href="/" class="home" style="margin-top: 0.5% !important; color: black !important; text-decoration:'none'" ><h2>EA FITNESS</h2> </a>
+        <div class="container-fluid " style="padding: 0% !important;" >
+          <a href="/" class="home" style=" color: black !important; text-decoration:'none'" >
+           <h1>EA-FITNESS</h1>
+          </a>
             {% if user.is_authenticated %}
         <div class="efitness-navlinks" style="margin-top: 0.5% !important;">
           <nav class="not-collapsed-nav">
