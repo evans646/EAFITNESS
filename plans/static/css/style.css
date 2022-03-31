@@ -547,7 +547,7 @@ footer {
   padding: 1em 2em;
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: space-around;
   gap: 1em;
   font-family: 'Righteous', cursive;
 }
@@ -567,7 +567,7 @@ footer ul {
   font-size: 1.1em;
   font-weight: 500;
   padding: 0.em 0;
-  margin-left: 13% !important;
+  margin-left: 9% !important;
 }
 
 .col-list a {
@@ -641,11 +641,14 @@ footer ul {
   font-size: 1em;
   color: var(--color);
   font-weight: 500;
-  margin-right: -20px;
+  margin-right: -10px !important;
 }
 h3.social-col-title{
-  margin-left: 17% !important;
+  margin-left: 12% !important;
+  border-bottom: 3px solid red;
+  width: 16%;
 }
+
 .social-media {
   flex-direction: column;
 }

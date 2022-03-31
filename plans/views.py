@@ -29,7 +29,6 @@ def updateaccounts(request):
         customer.save()
     return HttpResponse('completed')
 
-
 def home(request):
     plans = FitnessPlan.objects
     print(plan)
@@ -88,7 +87,6 @@ def checkout(request):
         pass
     #coupons
     coupons = {'halloween':15, 'welcome':10,'evansreferal':20}
-
 
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])
