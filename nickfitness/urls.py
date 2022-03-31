@@ -32,10 +32,13 @@ urlpatterns = [
     path('auth/settings', views.settings, name='settings'),
     path('updateaccounts', views.updateaccounts, name='updateaccounts'),
     path('blog', views.blog, name='blog'),
-    path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail'),
-    path('workout', views.workout, name='workout'),
-    path('springchallenge', views.springchallenge, name='springchallenge'),
-    path('video', views.video, name='video')
+    path('fitness', views.fitness, name='fitness'),
+    path('food', views.food, name='food'),
+    path('health', views.health, name='health'),
+    path('love', views.love, name='love'),
+    path('beauty', views.beauty, name='beauty'),
+    path('culture', views.culture, name='culture'),
+    path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail')
 ]
 
 

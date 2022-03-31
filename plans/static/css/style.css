@@ -9,7 +9,7 @@
     --color-smooth: #9da2ae;
     --input-border: #4d6ac8;
     --btn-bg-color: #f1f2fc;
-    --btn-hover-bg: #d5d9f6;
+    --btn-hover-bg:#f86b24;
     --btn-color: #2c3965;
   }
 
@@ -39,6 +39,7 @@ body {
   a:hover {
     text-decoration: none !important;
   }
+
 
 /* Navbar styles */
   .shadow{
@@ -378,6 +379,38 @@ h5{
     font-size:2.5rem
 }
 
+
+.hr-line {
+  display: flex;
+}
+
+.hr-line:before,
+.hr-line:after {
+  /* color:white; */
+  content: '';
+  flex: 1;
+  border-bottom: 5px solid;
+  margin: auto 0.25em;
+  /* box-shadow: 0 -1px; */
+}
+
+/* .hr-droid {
+  display: flex;
+  flex-direction: row;
+}
+.hr-line{
+  width: 50%;
+  position: relative;
+  margin: 15px;
+  border-bottom: 5px solid #a4c639;
+}
+.green{
+   border-color: #a4c639;
+}
+.purple {
+  border-color: #9860d1;
+} */
+
 /* 
 .triangle {
 position: absolute;
@@ -585,9 +618,10 @@ footer ul {
 }
 
 .subscribe-btn {
-  background: var(--btn-bg-color);
+  background:#f86b24;
   border: none;
   font-size: 1em;
+  outline: none;
   font-weight: 600;
   padding: 0.5em;
   border-radius: 0.3em;

@@ -44,14 +44,23 @@ def blogdetail(request, blog_id):
     blog_detail = get_object_or_404(Blog, pk=blog_id) #every model in the db has a pk(primary key)
     return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
 
-def workout(request):
-    return render(request,'interface/workoutPage.html')
+def fitness(request):
+    return render(request,'interface/fitnessPage.html')
 
-def video(request):
-    return render(request,'interface/videoPage.html')
+def food(request):
+    return render(request,'interface/foodPage.html')
 
-def springchallenge(request):
-    return render(request,'interface/springChallenge.html')
+def health(request):
+    return render(request,'interface/health.html')
+
+def beauty(request):
+    return render(request,'interface/beautyPage.html')
+
+def love(request):
+    return render(request,'interface/lovePage.html')
+
+def culture(request):
+    return render(request,'interface/culture.html')
 
 def plan(request,pk):
     plan = get_object_or_404(FitnessPlan, pk=pk)

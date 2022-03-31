@@ -1,6 +1,42 @@
-<section>
-    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h5><i class="fa-solid fa-quote-left"></i>If you think lifting is dangerous, try being weak. Being weak is dangerous. </h5>
-        <p class="lead " style="color:#068359!important;">Fitness Is Fun</p>
-      </div>    
-</section>
+{% load static %}
+<header >
+    <div class=" bg-dark" >
+      <div class="pb-0">
+        {% if user.is_authenticated %}
+      <span class="user-logged">
+        <a class=" text-white"><img  src="{% static 'images/user-loggedin.png' %}" width='20' height='20'/>Hi, {{user.username}}</a>
+      </span>
+        {%else%}
+        <span class="user-logged">
+          <a class="p-2 text-white"><img  src="{% static 'images/user.png' %}" width='20'/> Not signed in</a>
+        </span>
+       
+        {%endif%}
+      </div>
+      <div class="container">
+        <div>
+          <div class="pt-3" id="nav">
+            <div class="nav-links-wrapper">
+              <ul class="header-nav-links">
+                <div class="header-nav-items">
+                  <li><a   href="{% url 'fitness' %}" class="text-white"><img  class="header-icons" src="{% static 'images/gym.png' %}" width='40'/>FITNESS</a></li>
+                  <li><a href="{% url 'food' %}" class="text-white"><img  src="{% static 'images/food.png' %}" width='40'/>FOOD</a></li>
+                  <li><a href="{% url 'health' %}" class="text-white"><img  src="{% static 'images/heartbeat .png' %}" width='40'/>HEALTH</a></li>
+                  <li><a href="{% url 'love' %}" class="text-white"><img  src="{% static 'images/love.png' %}" width='40'/>LOVE</a></li>
+                  <li><a href="{% url 'beauty' %}" class="text-white"><img  src="{% static 'images/beauty.png' %}" width='40'/>BEAUTY</a></li>
+                  <li><a href="{% url 'culture' %}" class="text-white"><img  src="{% static 'images/culture.png' %}" width='40'/>CULTURE</a></li>
+                </div>
+               </ul>
+              </div>
+              <hr>
+              <div class="small-navs-wrapper">
+                <ul>
+                  <li><a href="{% url 'blog' %}" class="text-white small-nave-item" style="font-size:1.6em">Blog</a><img  src="{% static 'images/divider.png' %}" width='40'/></li>
+                  <li><a  href="{% url 'join' %}" class="text-white small-nave-item" style=" margin-right:5%;font-size:1.6em">Premium</a></li>
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
