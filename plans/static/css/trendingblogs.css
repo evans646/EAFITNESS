@@ -68,16 +68,17 @@
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: capitalize;
+    font-family: 'Righteous', cursive;
     margin: 0px;
   }
   
   .card_text {
     color: #ffffff;
-    font-size: 0.875rem;
+    font-size: 1.2rem;
     line-height: 1.5;
     margin-bottom: 1.25rem;    
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
   }
   
   

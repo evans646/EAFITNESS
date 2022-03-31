@@ -1,6 +1,5 @@
 {% load static %}
 <link rel="stylesheet" type="text/css"  href="{% static 'css/trendingblogs.css' %}">
-
   <h1>Trending Blogs</h1>
   <div class="container-fluid main">
       <div class="row">
@@ -14,8 +13,10 @@
                       <div class="card_image"><img  src="{{ plan.image.url}}"></div>
                       <div class="card_content">
                         <h2 class="card_title">{{plan.title}}</h2>
-                        <p class="card_text">{{plan.summary}}</p>
-                       <button class="btn card_btn">Read More</button>
+                        <p class="card_text">{{plan.summary}}</p>            
+                        <a href="{% url 'plan' plan.id %}">
+                          <button class="btn card_btn">Read More</button>
+                        </a>
                       </div>
                     </div>
                   </li>

@@ -36,7 +36,6 @@ urlpatterns = [
     path('workout', views.workout, name='workout'),
     path('springchallenge', views.springchallenge, name='springchallenge'),
     path('video', views.video, name='video')
-    
 ]
 
 

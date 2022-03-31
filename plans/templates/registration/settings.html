@@ -7,7 +7,22 @@ margin: 15% auto;">
   {% elif membership %}
   <form action="{% url 'settings' %}" method="POST">
     {% csrf_token %}
-    <input type="submit" value="Cancel Membership?">
+    <p style="padding-bottom:5px">
+     Do you want to cancel your membership ? hit the button below to cancle and your subscribtion will run to the end of the billing cycle 
+    </p>
+    <input type="submit" value="Cancel " style="text-transform:uppercase;
+    font-size:19px;
+    color:#fefefe !important;
+    text-decoration:none;
+    background-color:#212529;
+    line-height:1;
+    padding: 20px !important;;
+    border-top:1px solid #bbb !important;
+    width:40%;
+    display:inline-block;
+    cursor: pointer;
+    margin-top:6px;
+    display:block;">
   </form>
   {% else %}
  <h4 class='mt-5'> <a href="{% url 'join' %}">Get a membership</a></h4>
