@@ -57,9 +57,9 @@ body {
 .sign {
   position: absolute;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
-  margin-right: 20%;
+  margin-left: 2%;
   width: 12%;
   height: 40%;
   background-image: radial-gradient(
@@ -310,10 +310,11 @@ body {
 
 /* Fitness quote */
 .fa-quote-left{
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 4px;
   padding: 3px;
+  color: #068359 !important;
 }
 
 
@@ -332,6 +333,7 @@ body {
   height: 5%;
   padding:10px
 }
+
 
 .blurb h2 {
   color: #068359;
@@ -487,53 +489,7 @@ article p {
 
 
   /* scroll-top */
-/* 
-  .scrolltop {
-    display:none;
-    width:100%;
-    margin:0 auto;
-    position:fixed;
-    bottom:20px;
-    right:10px;	
-    transition: 0.9s;
-    -moz-transition: 0.9s;
-    -webkit-transition: 0.9s;
-    -o-transition: 0.9s; 	
-  }
-  .scroll {
-    position:absolute;
-    right:20px;
-    bottom:20px;
-    background:#f86b24;
-    background:#f86b24;
-    padding:20px;
-    text-align: center;
-    margin: 0 0 0 0;
-    cursor:pointer;
-    transition: 0.9s;
-    -moz-transition: 0.9s;
-    -webkit-transition: 0.9s;
-    -o-transition: 0.9s; 		
-  }
-  .scroll:hover {
-    background:#068359;
-    transition: 0.5s;
-    -moz-transition: 0.5s;
-    -webkit-transition: 0.5s;
-    -o-transition: 0.5s; 		
-  }
-  .scroll:hover .fa {
-    padding-top:-10px;
-  }
-  .scroll .fa {
-    font-size:30px;
-    margin-top:-5px;
-    margin-left:1px;
-    transition: 0.9s;
-    -moz-transition: 0.9s;
-    -webkit-transition: 0.9s;
-    -o-transition: 0.9s; 	
-  } */
+
   .go-top {
     position: fixed;
     bottom: 2em;
@@ -552,7 +508,6 @@ article p {
   
 
 /* footer-styles */
-
 footer {
   font-size: 15px;
   background: var(--footer-bg);

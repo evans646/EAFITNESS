@@ -19,27 +19,12 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, .1);
 }
 
-.credit {
-  position: relative;
-  margin: 25px auto 0 auto;
-  width: 100%;
-  text-align: center;
-  color: #666666;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.credit a {
-  color: #222222;
-  font-size: 16px;
-  font-weight: 600;
-}
-
 /* * * * * Login Form CSS * * * * */
-h2 {
+.login-form h2 {
   margin: 0 0 15px 0;
   font-size: 30px;
   font-weight: 700;
+  color:  #068359 !important;
 }
 
 h2 img {
@@ -68,7 +53,7 @@ p {
 }
 
 .btn:hover {
-  color: #4CAF50;
+  color:  #068359;
   background: #ffffff;
 }
 
@@ -123,7 +108,7 @@ p {
 }
 
 .login-form p a {
-  color: #4CAF50;
+ color: #068359 !important;
   font-size: 14px;
   text-decoration: none;
 }
@@ -167,13 +152,13 @@ p {
 
 .login-form input.btn {
   color: #ffffff;
-  background: #4CAF50;
-  border-color: #4CAF50;
+  background: #068359 !important;
+  border-color:  #068359;
   outline: none;
   cursor: pointer;
 }
 
 .login-form input.btn:hover {
-  color: #4CAF50;
+  color: #068359 !important;
   background: #ffffff;
 }

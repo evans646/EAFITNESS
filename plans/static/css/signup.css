@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding-bottom:3%
   }
   
    .signUp-page-container {
@@ -19,12 +20,12 @@
     background: #ffffff;
     box-shadow: 0 0 15px rgba(0, 0, 0, .1);
   }
-  
 
 .signup-form h2 {
     margin: 0 0 15px 0;
     font-size: 30px;
     font-weight: 700;
+    color:  #068359 !important;
   }
   
   .signup-form h2 img {
