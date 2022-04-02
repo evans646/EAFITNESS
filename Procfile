@@ -1,2 +1,1 @@
-web: gunicorn nickfitness.wsgi  — log-file
-web: python ./manage.py runserver 0.0.0.0:$PORT
+web: gunicorn PROJECT_NAME.wsgi
