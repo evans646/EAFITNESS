@@ -35,7 +35,7 @@ smallHeaderNavLinks.css({
     "margin":"1%",
     "padding-bottom":"2%"
   })
-   
+
 
   const userNameOnDisplayLogo = $('.user-logged img');
   userNameOnDisplayLogo.css({

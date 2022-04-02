@@ -1,4 +1,4 @@
 db.sqlite3
 env/
 venv/
-/nickfitness 
+/nickfitness sendgrid.env

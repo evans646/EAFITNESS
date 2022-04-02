@@ -9,11 +9,12 @@ from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
+# from sendgrid import SendGridAPIClient
+# from sendgrid.helpers.mail import Mail
+
+
 import stripe
 stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53rjWyuIV9maaKp4Qn9VpO7RE5A8wX2QCcEJo006qsqVE3X'
-
-
-
 
 #only super users can access this account
 @user_passes_test(lambda u: u.is_superuser)
@@ -87,7 +88,7 @@ def checkout(request):
         pass
     #coupons
     coupons = {'halloween':15, 'welcome':10,'evansreferal':20}
-
+    
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])
         plan = 'price_1Ju6f2E9EMUzkjDtpVYOaDJj'

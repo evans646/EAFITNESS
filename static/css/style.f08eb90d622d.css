@@ -15,14 +15,14 @@
 
 
 body {
-    background-color: rgb(255, 255, 255)!important;
+    background-color: rgb(254, 251, 251)!important;
     height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     scroll-behavior: smooth;
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     font-family: 'Righteous', cursive;
 };
@@ -30,6 +30,7 @@ body {
 
 
   html { 
+    background-color: rgb(201, 52, 52)!important;
     scroll-behavior: smooth !important; 
     position: relative;
     min-height: 100%;
@@ -118,9 +119,9 @@ body {
   }
   100% {
     color: black;
-  text-shadow: 0 0 0.6rem  #0c8959, 0 0 1.5rem #055256,
-    -0.2rem 0.1rem 1rem  #0c8959, 0.2rem 0.1rem 1rem #0c8959,
-    0 -0.5rem 2rem black, 0 0.5rem 3rem  #0c8959;
+  text-shadow: 0 0 0.6rem #068359, 0 0 1.5rem #055256,
+    -0.2rem 0.1rem 1rem #068359, 0.2rem 0.1rem 1rem #0c8959,
+    0 -0.5rem 2rem black, 0 0.5rem 3rem #068359;
   }
 }
 
@@ -478,15 +479,14 @@ z-index: 100;
 
 /* Blog details-page styles */
 article {
-max-width: 800px;
+max-width: 700px;
 margin: 0 auto;
 z-index: 100;
 }
 article h1 {
+font-family: 'Merriweather';
 font-weight: 700;
 font-size: 3.5rem;
-font-family: 'Righteous', cursive;
-border-width: 20%;
 color: #202020;
 margin-bottom: 0.25em;
 text-align: center;
@@ -499,7 +499,7 @@ font-family: Merriweather;
 font-size: 1em;
 font-weight: 400;
 display: block;
-color: #666b75;
+color: #828385;
 text-align: center;
 margin-bottom: 0.250em
 }
@@ -510,7 +510,8 @@ font-size: 1.150em;
 line-height: 1.4;
 color: #363636;
 margin-bottom: 1.1635em;
-padding: 0.20em;
+letter-spacing: -0.0040em;
+padding: 0.50em;
 }
 
 @media only screen and (min-width: 768px) {
@@ -521,7 +522,8 @@ article p {
 
 
   /* scroll-top */
-.go-top {
+
+  .go-top {
     position: fixed;
     bottom: 2em;
     right: 2em;
@@ -596,7 +598,7 @@ footer ul {
   color:#833AB4!important;
 }
 .subscribe-input {
-  width: 5%;
+  width: auto;
   flex: 1;
   background: transparent;
   border: 0.06em solid var(--input-border);
@@ -643,7 +645,7 @@ footer ul {
 }
 h3.social-col-title{
   margin-left: 12% !important;
-  border-bottom: 3px solid #f86b24 !important;
+  border-bottom: 3px solid red;
   width: 16%;
 }
 

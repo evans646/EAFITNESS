@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
-
 import os
 import dj_database_url
 
@@ -20,7 +19,6 @@ import cloudinary.api
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
@@ -28,13 +26,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False
+DEBUG =True
 SITE_ID = 2
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
 
 # EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER ='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' # this is exactly the value 'apikey'
+# EMAIL_HOST_USER ='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'
 # EMAIL_HOST_PASSWORD =1122
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
