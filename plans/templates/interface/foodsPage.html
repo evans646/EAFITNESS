@@ -1,0 +1,33 @@
+{% extends 'plans/base.html' %}
+{% block content %}
+{% load static %}
+<h1 class="text-center py-3">Food</h1>
+{% load static %}
+<link rel="stylesheet" type="text/css"  href="{% static 'css/trendingblogs.css' %}">
+  <div class="container-fluid main">
+      <div class="row">
+        {% for food in foods.all %}
+        <div class="col-md-4 ">
+          <div class="main">
+              <ul class="cards">
+                  <li class="cards_item">
+                    <div class="card">
+                      <div class="card_image"><img  src="{{ food.image.url}}"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">{{food.name}}</h2>
+                        <p class="card_text">{{food.description}}</p>            
+                        <a href="{% url 'food' food.id %}">
+                            <button class="btn card_btn">Read More</button>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                <!-- </a> -->
+              </ul>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+{% endblock %}
