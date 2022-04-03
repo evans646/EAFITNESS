@@ -3,14 +3,14 @@ from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import FitnessPlan,Customer,Blog
+from .models import FitnessPlan,Customer,Blog,Food
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
-# from sendgrid import SendGridAPIClient
-# from sendgrid.helpers.mail import Mail
+    # from sendgrid import SendGridAPIClient
+    # from sendgrid.helpers.mail import Mail
 
 
 import stripe
@@ -28,12 +28,14 @@ def updateaccounts(request):
             customer.membership = True
         customer.cancel_at_period_end = subscription.cancel_at_period_end
         customer.save()
-    return HttpResponse('completed')
-
+    return HttpResponse('completed') 
+    
 def home(request):
     plans = FitnessPlan.objects
-    print(plan)
     return render(request, 'plans/home.html', {'plans':plans})
+
+def about(request):
+    return render(request, 'interface/about.html')
 
 def blog(request):
     blogs = Blog.objects
@@ -45,10 +47,26 @@ def blogdetail(request, blog_id):
     return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
 
 def fitness(request):
-    return render(request,'interface/fitnessPage.html')
-
-def food(request):
-    return render(request,'interface/foodPage.html')
+    plans = FitnessPlan.objects
+    return render(request,'interface/fitnessPage.html', {'plans':plans})
+#to show all foods
+def foodsPage(request):
+    foods = Food.objects
+    return render(request,'interface/foodsPage.html', {'foods':foods})
+#this is the food object,so if a user !has sub to premium they will be redirected to join 
+def food(request,pk):
+    food = get_object_or_404(Food,pk=pk)
+    if food.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/food.html', {'food':food})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/food.html', {'food':food})
+  
 
 def health(request):
     return render(request,'interface/health.html')

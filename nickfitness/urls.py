@@ -31,16 +31,17 @@ urlpatterns = [
     path('checkout', views.checkout, name='checkout'),
     path('auth/settings', views.settings, name='settings'),
     path('updateaccounts', views.updateaccounts, name='updateaccounts'),
+    path('about', views.about, name='about'),
     path('blog', views.blog, name='blog'),
     path('fitness', views.fitness, name='fitness'),
-    path('food', views.food, name='food'),
+    path('food', views.foodsPage, name='foodsPage'),
+    path('foods/<int:pk>',views.food,name='food'),
     path('health', views.health, name='health'),
     path('love', views.love, name='love'),
     path('beauty', views.beauty, name='beauty'),
     path('culture', views.culture, name='culture'),
     path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail')
 ]
-
 
 
 if settings.DEBUG:

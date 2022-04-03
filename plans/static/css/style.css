@@ -40,6 +40,9 @@ body {
   }
 
 
+
+
+
 /* Navbar styles */
   .shadow{
     font-family:Mr Dafoe, sans-serif;
@@ -473,8 +476,6 @@ z-index: 100;
 }
 } */
 
-/* Blog styles */
-
 
 /* Blog details-page styles */
 article {
@@ -690,4 +691,6 @@ color: #068359 !important;
 a:hover{
 text-decoration: none !important;
 }
+
+
 

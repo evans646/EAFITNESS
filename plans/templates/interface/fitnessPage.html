@@ -1,5 +1,69 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1>Fitness</h1>
+<style>
+    /* Blog styles */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.content {
+  display: none;
+}
+#loadMore {
+  width: 200px;
+  color: #fff;
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  background-color: blue;
+  transition: .3s;
+}
+#loadMore:hover {
+  color: blue;
+  background-color: #fff;
+  border: 1px solid blue;
+  text-decoration: none;
+}
+.noContent {
+  color: #000 !important;
+  background-color: transparent !important;
+  pointer-events: none;
+}
+
+</style>
+<h1 class="text-center">Fitness</h1>
+<link rel="stylesheet" type="text/css"  href="{% static 'css/trendingblogs.css' %}">
+  <div class="container-fluid main">
+      <div class="row">
+        {% for plan in plans.all %}
+        <div class="col-md-4 ">
+          <div class="main">
+              <ul class="cards flex">
+                <!-- <a href="{% url 'plan' plan.id %}"> -->
+                  <li class="cards_item content">
+                    <div class="card">
+                      <div class="card_image"><img  src="{{ plan.image.url}}"></div>
+                      <div class="card_content">
+                        <h2 class="card_title">{{plan.title}}</h2>
+                        <p class="card_text">{{plan.summary}}</p>            
+                        <a href="{% url 'plan' plan.id %}">
+                          <button class="btn card_btn">Read More</button>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                <!-- </a> -->
+              </ul>
+            </div>
+        </div>
+        {% endfor %}
+      </div>
+     <a href="#" id="loadMore">Load More</a>
+    </div>
 {% endblock %}
