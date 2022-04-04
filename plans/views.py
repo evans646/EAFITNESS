@@ -66,7 +66,7 @@ def food(request,pk):
         return redirect('join')
     else:
        return render(request, 'interface/food.html', {'food':food})
-  
+
 
 def health(request):
     return render(request,'interface/health.html')
