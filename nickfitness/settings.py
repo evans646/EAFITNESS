@@ -27,11 +27,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-<<<<<<< HEAD
-DEBUG =True
-=======
+
 DEBUG =False
->>>>>>> e3bd0c56f41b7e93e6c3343cd9ef364f8d09b646
+
 SITE_ID = 1
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
