@@ -9,10 +9,6 @@ from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
-    # from sendgrid import SendGridAPIClient
-    # from sendgrid.helpers.mail import Mail
-
-
 import stripe
 stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53rjWyuIV9maaKp4Qn9VpO7RE5A8wX2QCcEJo006qsqVE3X'
 
@@ -132,7 +128,7 @@ def checkout(request):
         customer.cancel_at_period_end = False
         customer.stripe_subscription_id = subscription.id
         customer.save()
-
+        
         return redirect('home')
     else:
         coupon = 'none'
@@ -152,8 +148,6 @@ def checkout(request):
                 print('fam')
                 coupon = request.GET['coupon'].lower()
                 percentage = coupons[request.GET['coupon'].lower()]
-
-
                 coupon_price = int((percentage / 100) * price)
                 price = price - coupon_price
                 coupon_dollar = str(coupon_price)[:-2] + '.' + str(coupon_price)[-2:]

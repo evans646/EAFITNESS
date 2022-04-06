@@ -3,11 +3,10 @@
 <section>
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container-fluid d-flex" >
-          <a href="/" class="home" style=" color: black !important; text-decoration:'none'" >
-            <div class="shadow">Fitness</div>
-            <div class="sign">
-              <span class="fast-flicker">E</span>A.
-            </div>
+          <a href="/" style=" color: black !important; text-decoration:'none'" >    
+            
+            <div class="shadow"><span class="retro">EA.</span>Fitness</div>
+          </a>
             {% if user.is_authenticated %}
         <div class="efitness-navlinks" style="margin-top: 0.5% !important;">
           <nav class="not-collapsed-nav">
@@ -21,7 +20,7 @@
               </li>
           
                <li>
-                <a class="p-2 text-dark link" href="{% url 'logout' %}"><i class="fa fa-arrow-right-to-bracket"></i> Log Out</a>
+                <a class="p-2 text-dark link" href="{% url 'logout' %}"><i class="fa fa-arrow-right-to-bracket"></i> LogOut</a>
                </li>
               </ul>
           </div>
