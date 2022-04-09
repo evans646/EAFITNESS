@@ -1,46 +1,40 @@
 {% include "interface/header.html" %}
 {% load static %}
-<section>
-    <div class="navbar navbar-dark bg-dark box-shadow">
-        <div class="container-fluid d-flex" >
-          <a href="/" style=" color: black !important; text-decoration:'none'" >    
-            
-            <div class="shadow"><span class="retro">EA.</span>Fitness</div>
+  <section>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+      <div class="navbrand-shadow"><span class="retro">EA.</span>Fitness</div>
+    
+     {%if user.is_authenticated%}
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'settings'%}">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'logout'%}">LogOut</a>
+        </li>
+      </ul>
+    </div>
+     {%else%}
+     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'login'%}">
+            <button>Sign In</button>
           </a>
-            {% if user.is_authenticated %}
-        <div class="efitness-navlinks" style="margin-top: 0.5% !important;">
-          <nav class="not-collapsed-nav">
-           <div class="login-signup-links">
-            <ul>
-              <li>
-               <a class="p-2 text-dark link" href="{% url 'about' %}">About</a>
-              </li>
-              <li>
-               <a class="p-2 text-dark link" href="{% url 'settings' %}">Settings</a>
-              </li>
-          
-               <li>
-                <a class="p-2 text-dark link" href="{% url 'logout' %}"><i class="fa fa-arrow-right-to-bracket"></i> LogOut</a>
-               </li>
-              </ul>
-          </div>
-            {% else %}
-         <div class="login-signup-links">
-          <ul class="list-unstyled">
-            <li> 
-              <a class="text-dark link" href="{% url 'login' %}">
-                <button class="login-btn">Sign in</button>
-              </a>
-            </li>
-
-            <li>
-              <i class="fa fa-arrow-right-to-bracket"></i> <a  href="{% url 'signup' %}">Sign up</a>
-            </li>
-          </ul>
-           </div>
-         </div>
-            {% endif %} 
-       </nav>
-            </div>
-          </div>
-  </section> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'signup'%}">SignUp</a>
+        </li>
+      </ul>
+    </div>
+     {%endif%}
+    </nav>
+  </section>

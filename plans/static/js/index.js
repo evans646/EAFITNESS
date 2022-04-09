@@ -1,6 +1,4 @@
 $(function(){
-
-
     $(".content").slice(0, 4).show();
     $("#loadMore").on("click", function(e){
       e.preventDefault();
@@ -10,7 +8,22 @@ $(function(){
       }
     });
     
-
+    $(function(){
+      //the shrinkHeader variable is where you tell the scroll effect to start.
+      var shrinkHeader = 70;
+       $(window).scroll(function() {
+         var scroll = getCurrentScroll();
+           if ( scroll >= shrinkHeader ) {
+                $('.header-box').addClass('smaller');
+             }
+             else {
+                 $('.header-box').removeClass('smaller');
+             }
+       });
+     function getCurrentScroll() {
+         return window.pageYOffset || document.documentElement.scrollTop;
+         }
+     });
 
 
   $(window).scroll(function() {
