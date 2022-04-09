@@ -1,9 +1,9 @@
 {% load static %}
-<header style="height:30px; position:relative; background-color: rgb(80, 80, 80); box-sizing: border-box;">
-  <div class="container-fluid">
+<header style="height:30px; position:relative; background-color: rgba(183, 183, 183, 0.567); box-sizing: border-box;">
+  <div class="container-fluid" style="display:inline-block">
     <div class="row">
       <div class="col">
-     <p class="py-1 text-white">
+     <p class="py-1" style="color:#068359">
        Stay connected
      
        <a  href="#" target="_blank">
@@ -23,27 +23,23 @@
       </div>
 
       <div class="col">
-      <p  class="py-1 text-white" style="float: left;margin-left: 50%;">
-       Have any question ? Support@eafitness.com
-      </p>
+        <div class="pb-0" style="margin-left:80%">
+          {% if user.is_authenticated %}
+        <span class="user-logged">
+          <p   style="color:#068359 "><img  src="{% static 'images/user-loggedin.png' %}" width='20' height='20'/> Hi, {{user.username}}</p>
+        </span>
+          {%else%}
+          <span class="user-logged">
+            <p style="color:#068359 "><img  src="{% static 'images/user.png' %}" width='20'/> Not signed in</p>
+          </span>
+          {%endif%}
+        </div>
       </div>
     </div>
   </div>
 </header>
 <header >
     <div class=" bg-dark" >
-      <div class="pb-0">
-        {% if user.is_authenticated %}
-      <span class="user-logged">
-        <a class=" text-white"><img  src="{% static 'images/user-loggedin.png' %}" width='20' height='20'/>Hi, {{user.username}}</a>
-      </span>
-        {%else%}
-        <span class="user-logged">
-          <a class="p-2 text-white"><img  src="{% static 'images/user.png' %}" width='20'/> Not signed in</a>
-        </span>
-       
-        {%endif%}
-      </div>
       <div class="container">
         <div>
           <div class="pt-3" id="nav">

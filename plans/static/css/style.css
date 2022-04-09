@@ -94,7 +94,8 @@ padding:5px 10px;
 border-radius:7px;
 background-color:#f86b24;
 outline: none;
-margin-bottom:7px
+margin-bottom:7px;
+cursor: pointer;
 }
 /* .nav-link button:hover{
     background-color:#068359 !important;
