@@ -1,20 +1,20 @@
 {% load static %}
-<link rel="stylesheet" type="text/css"  href="{% static 'css/trendingblogs.css' %}">
+<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
 <h1 class="hr-line container">Trending Blogs</h1>
   <div class="container-fluid main">
       <div class="row">
         {% for plan in plans.all %}
         <div class="col-md-4 ">
           <div class="main">
-              <ul class="cards">
-                  <li class="cards_item">
+              <ul class="cards flex">
+                  <li class="cards_item content">
                     <div class="card">
                       <div class="card_image"><img  src="{{ plan.image.url}}"></div>
                       <div class="card_content">
                         <h2 class="card_title">{{plan.title}}</h2>
                         <p class="card_text">{{plan.summary}}</p>            
                         <a href="{% url 'plan' plan.id %}">
-                          <button class="btn card_btn">Read More</button>
+                          <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
                         </a>
                       </div>
                     </div>

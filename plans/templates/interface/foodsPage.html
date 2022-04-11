@@ -3,21 +3,21 @@
 {% load static %}
 <h1 class="text-center py-3">Food</h1>
 {% load static %}
-<link rel="stylesheet" type="text/css"  href="{% static 'css/trendingblogs.css' %}">
+<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
   <div class="container-fluid main">
       <div class="row">
         {% for food in foods.all %}
         <div class="col-md-4 ">
           <div class="main">
-              <ul class="cards">
-                  <li class="cards_item">
+              <ul class="cards flex">
+                  <li class="cards_item content">
                     <div class="card">
                       <div class="card_image"><img  src="{{ food.image.url}}"></div>
                       <div class="card_content">
                         <h2 class="card_title">{{food.name}}</h2>
                         <p class="card_text">{{food.description}}</p>            
                         <a href="{% url 'food' food.id %}">
-                            <button class="btn card_btn">Read More</button>
+                            <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
                         </a>
                       </div>
                     </div>
@@ -28,6 +28,7 @@
         </div>
         {% endfor %}
       </div>
+      <a href="#" id="loadMore">Load More</a>
     </div>
 
 {% endblock %}
