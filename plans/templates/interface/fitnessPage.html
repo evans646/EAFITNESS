@@ -1,7 +1,7 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1 class="text-center">Fitness</h1>
+<h1 class="text-center py-3" style="font-size:2.5em;text-align:center">Fitness</h1>
 <link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
   <div class="container-fluid main">
       <div class="row">
@@ -9,7 +9,6 @@
         <div class="col-md-4 ">
           <div class="main">
               <ul class="cards flex">
-                <!-- <a href="{% url 'plan' plan.id %}"> -->
                   <li class="cards_item content">
                     <div class="card">
                       <div class="card_image"><img  src="{{ plan.image.url}}"></div>
@@ -22,12 +21,13 @@
                       </div>
                     </div>
                   </li>
-                <!-- </a> -->
               </ul>
             </div>
         </div>
         {% endfor %}
       </div>
-     <a href="#" id="loadMore">Load More</a>
+      <div class="loadmore-wrapper">
+        <a href="#" id="loadMore">Load More</a>
+    </div>
     </div>
 {% endblock %}

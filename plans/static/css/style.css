@@ -128,6 +128,7 @@ cursor: pointer;
   padding: 10px 10px;
   text-decoration: none;
   padding-top: 10px;
+  cursor: pointer;
 }
 
 .header-nav-items a {
@@ -259,6 +260,11 @@ h5 {
   font-size: 2.5rem;
 }
 
+.page-title{
+  text-align: center;
+  font-size: 2.5em;
+}
+
 .hr-line {
   display: flex;
 }
@@ -280,21 +286,57 @@ h5 {
 .content {
   display: none;
 }
-#loadMore {
-  color: white !important;
-  width: 200px;
-  display: block;
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid transparent;
-  background-color: #068359;
-  transition: .3s;
+.loadmore-wrapper{
+  padding: 1.5rem  1.5em;
+  margin-left: 45%;
+  filter: url("#goo");
 }
-#loadMore:hover {
-  color: #ffffff;
+#loadMore {
+  display: inline-block;
+  text-align: center;
+  background: #068359;
+  font-family: "Righteous", cursive;
+  color: white !important;
+  font-weight: bold;
+  padding: 1.18em 1.32em 1.03em;
+  line-height: 1;
+  border-radius: 1em;
+  position: relative;
+  min-width: 8.23em;
   text-decoration: none;
+  font-family: var(--font);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+#loadMore:before,
+#loadMore:after {
+  width: 4.4em;
+  height: 2.95em;
+  position: absolute;
+  content: "";
+  display: inline-block;
+  background: #068359;
+  border-radius: 50%;
+  transition: transform 1s ease;
+  transform: scale(0);
+  cursor: pointer;
+  z-index: -1;
+}
+
+#loadMore:before {
+  top: -25%;
+  left: 20%;
+}
+
+#loadMore:after {
+  bottom: -25%;
+  right: 20%;
+}
+
+#loadMore:hover:before,
+#loadMore:hover:after {
+  transform: none;
 }
 .noContent {
   color: rgb(255, 254, 254) !important;

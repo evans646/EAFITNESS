@@ -1,7 +1,7 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1 class="text-center py-3">Food</h1>
+<h1 class=" py-3 page-title">Food</h1>
 {% load static %}
 <link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
   <div class="container-fluid main">
@@ -28,7 +28,9 @@
         </div>
         {% endfor %}
       </div>
-      <a href="#" id="loadMore">Load More</a>
+      <div class="loadmore-wrapper">
+        <a href="#" id="loadMore">Load More</a>
+      </div>
     </div>
 
 {% endblock %}
