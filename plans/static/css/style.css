@@ -30,10 +30,6 @@ a:hover {
   text-decoration: none !important;
 }
 
-/* .top-header-links{
-  margin-left: 80%;
-} */
-
 /* Navbar styles */
 /* 
   This gives the nav logo text effect */
@@ -128,7 +124,6 @@ cursor: pointer;
   padding: 10px 10px;
   text-decoration: none;
   padding-top: 10px;
-  cursor: pointer;
 }
 
 .header-nav-items a {

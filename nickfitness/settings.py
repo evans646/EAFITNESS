@@ -30,6 +30,7 @@ SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 
 DEBUG =True
 
+
 SITE_ID = 1
 
 # SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')

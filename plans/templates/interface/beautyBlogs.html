@@ -1,22 +1,21 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1 class=" py-3 page-title">Food</h1>
-{% load static %}
+<h1 class=" py-3 page-title">Beauty</h1>
 <link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
   <div class="container-fluid main">
       <div class="row">
-        {% for food in foods.all %}
+        {% for beautyBlog in beautyBlogs.all %}
         <div class="col-md-4 ">
           <div class="main">
               <ul class="cards flex">
                   <li class="cards_item content">
                     <div class="card">
-                      <div class="card_image"><img  src="{{ food.image.url}}"></div>
+                      <div class="card_image"><img  src="{{ beautyBlog.image.url}}"></div>
                       <div class="card_content">
-                        <h2 class="card_title">{{food.name}}</h2>
-                        <p class="card_text">{{food.description}}</p>            
-                        <a href="{% url 'food' food.id %}">
+                        <h2 class="card_title">{{loveBlog.title}}</h2>
+                        <p class="card_text">{{ loveBlog.description}}</p>            
+                        <a href="{% url 'beauty' beautyBlog.id %}">
                             <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
                         </a>
                       </div>
@@ -28,8 +27,11 @@
         </div>
         {% endfor %}
       </div>
+      {%if beautyBlogs.all%}
       <div class="loadmore-wrapper">
-        <a href="#" id="loadMore">Load More</a>
+          <a href="#" id="loadMore">Load More</a>
       </div>
+      {%endif%}
     </div>
 {% endblock %}
+

@@ -32,13 +32,18 @@ urlpatterns = [
     path('updateaccounts', views.updateaccounts, name='updateaccounts'),
     path('about', views.about, name='about'),
     path('blog', views.blog, name='blog'),
-    path('fitness', views.fitness, name='fitness'),
+    path('fitness', views.fitnessBlogs, name='fitnessBlogs'),
+    path('fitness/<int:pk>', views.fitness, name='fitness'),
     path('food', views.foodsPage, name='foodsPage'),
     path('foods/<int:pk>',views.food,name='food'),
-    path('health', views.health, name='health'),
-    path('love', views.love, name='love'),
-    path('beauty', views.beauty, name='beauty'),
-    path('culture', views.culture, name='culture'),
+    path('health', views.healthBlogs, name='healthBlogs'),
+    path('health/<int:pk>', views.health, name='health'),
+    path('love', views.loveBlogs, name='loveBlogs'),
+    path('love/<int:pk>', views.love, name='love'),
+    path('beauty', views.beautyBlogs, name='beautyBlogs'),
+    path('beauty/<int:pk>', views.beauty, name='beauty'),
+    path('culture', views.cultureBlogs, name='cultureBlogs'),
+    path('culture/<int:pk>', views.culture, name='culture'),
     path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail')
 ]
 

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import FitnessPlan,Fitness, Customer,Blog,Food,Health,Love,Beauty,Culture
+from .models import FitnessPlan,FitnessBlog, Customer,Blog,Food,Health,Love,Beauty,Culture
 
 admin.site.register(FitnessPlan)
 admin.site.register(Customer)
@@ -10,4 +10,4 @@ admin.site.register(Love)
 admin.site.register(Beauty)
 admin.site.register(Food)
 admin.site.register(Culture)
-admin.site.register(Fitness)
+admin.site.register(FitnessBlog)

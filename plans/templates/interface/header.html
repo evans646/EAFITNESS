@@ -23,11 +23,11 @@
         <div class="pb-0 top-header-links" style="margin-left:70%;">
           {% if user.is_authenticated %}
         <span class="user-logged">
-          <p class="header-top-items"  style="color:#068359; margin-left: 50% !important;"><img  src="{% static 'images/user-loggedin.png' %}" width='20' height='20'/> Hi, {{user.username}}</p>
+          <p class="header-top-items"  style="color:#068359; margin-left:0% !important;"><img  src="{% static 'images/user-loggedin.png' %}" width='20' height='20'/> Hi, {{user.username}}</p>
         </span>
           {%else%}
           <span class="user-logged">
-            <p style="color:#068359; margin-left: 50% !important;"><img  src="{% static 'images/user.png' %}" width='20'/> Not signed in</p>
+            <p style="color:#068359; margin-left: 0% !important;"><img  src="{% static 'images/user.png' %}" width='20'/> Not signed in</p>
           </span>
           {%endif%}
         </div>
@@ -43,12 +43,12 @@
             <div class="nav-links-wrapper">
               <ul class="header-nav-links">
                 <div class="header-nav-items">
-                  <li><a   href="{% url 'fitness' %}" class="text-white"><img class="header-icons" src="{% static 'images/gym.png' %}" width='30'/>FITNESS</a></li>
+                  <li><a   href="{% url 'fitnessBlogs' %}" class="text-white"><img class="header-icons" src="{% static 'images/gym.png' %}" width='30'/>FITNESS</a></li>
                   <li><a href="{% url 'foodsPage' %}" class="text-white"><img  src="{% static 'images/food.png' %}" width='30'/>FOOD</a></li>
-                  <li><a href="{% url 'health' %}" class="text-white"><img  src="{% static 'images/heartbeat .png' %}" width='30'/>HEALTH</a></li>
-                  <li><a href="{% url 'love' %}" class="text-white"><img  src="{% static 'images/love.png' %}" width='30'/>LOVE</a></li>
-                  <li><a href="{% url 'beauty' %}" class="text-white"><img  src="{% static 'images/beauty.png' %}" width='30'/>BEAUTY</a></li>
-                  <li><a href="{% url 'culture' %}" class="text-white"><img  src="{% static 'images/culture.png' %}" width='30'/>CULTURE</a></li>
+                  <li><a href="{% url 'healthBlogs' %}" class="text-white"><img  src="{% static 'images/heartbeat .png' %}" width='30'/>HEALTH</a></li>
+                  <li><a href="{% url 'loveBlogs' %}" class="text-white"><img  src="{% static 'images/love.png' %}" width='30'/>LOVE</a></li>
+                  <li><a href="{% url 'beautyBlogs' %}" class="text-white"><img  src="{% static 'images/beauty.png' %}" width='30'/>BEAUTY</a></li>
+                  <li><a href="{% url 'cultureBlogs' %}" class="text-white"><img  src="{% static 'images/culture.png' %}" width='30'/>CULTURE</a></li>
                 </div>
                </ul>
               </div>

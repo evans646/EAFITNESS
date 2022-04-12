@@ -3,7 +3,7 @@ from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import FitnessPlan,Customer,Blog,Food
+from .models import Beauty, FitnessPlan,Customer,Blog,Food,Health,Culture,Love,FitnessBlog
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
@@ -42,9 +42,23 @@ def blogdetail(request, blog_id):
     blog_detail = get_object_or_404(Blog, pk=blog_id) #every model in the db has a pk(primary key)
     return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
 
-def fitness(request):
-    plans = FitnessPlan.objects
-    return render(request,'interface/fitnessPage.html', {'plans':plans})
+def fitnessBlogs(request):
+    fitnessBlogs = FitnessBlog.objects
+    return render(request,'interface/fitnessBlogs.html', {'fitnessBlogs':fitnessBlogs})
+
+def fitness(request,pk):
+    fitness = get_object_or_404(FitnessBlog,pk=pk)
+    if fitness.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/fitnessPage.html', {'fitness':fitness})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/fitnessPage.html', {'fitness':fitness})
+
 #to show all foods
 def foodsPage(request):
     foods = Food.objects
@@ -64,17 +78,77 @@ def food(request,pk):
        return render(request, 'interface/food.html', {'food':food})
 
 
-def health(request):
-    return render(request,'interface/health.html')
+def healthBlogs(request):
+    healthBlogs = Health.objects
+    return render(request,'interface/healthBlogs.html',{'healthBlogs':healthBlogs})
 
-def beauty(request):
-    return render(request,'interface/beautyPage.html')
+def health(request,pk):
+    health = get_object_or_404(Health,pk=pk)
+    if health.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/health.html', {'health':health})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/health.html', {'health':health})
 
-def love(request):
-    return render(request,'interface/lovePage.html')
 
-def culture(request):
-    return render(request,'interface/culture.html')
+def beautyBlogs(request):
+    beautyBlogs = Beauty.objects
+    return render(request,'interface/beautyBlogs.html',{'beautyBlogs':beautyBlogs})
+
+def beauty(request,pk):
+    beauty = get_object_or_404(Beauty,pk=pk)
+    if beauty.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/beautyPage.html', {'beauty':beauty})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/beautyPage.html', {'beauty':beauty})
+
+
+def loveBlogs(request):
+    loveBlogs = Love.objects
+    return render(request,'interface/loveBlogs.html',{'loveBlogs':loveBlogs})
+
+def love(request,pk):
+    love = get_object_or_404(Love,pk=pk)
+    if love.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/lovePage.html', {'love':love})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/lovePage.html', {'love':love})
+
+
+def cultureBlogs(request):
+    cultureBlogs = Culture.objects
+    return render(request,'interface/cultureBlogs.html',{'cultureBlogs':cultureBlogs})
+
+def culture(request,pk):
+    culture = get_object_or_404(Culture,pk=pk)
+    if culture.premium :
+        if request.user.is_authenticated:
+            try:
+                if request.user.customer.membership:
+                    return render(request, 'interface/culture.html', {'culture':culture})
+            except Customer.DoesNotExist:
+                    return redirect('join')
+        return redirect('join')
+    else:
+       return render(request, 'interface/culture.html', {'culture':culture})
+
 
 def plan(request,pk):
     plan = get_object_or_404(FitnessPlan, pk=pk)

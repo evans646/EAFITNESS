@@ -1,33 +1,12 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-{% load static %}
-<h1 class="text-center py-3" style="font-size:2.5em;text-align:center">Fitness</h1>
-<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
-  <div class="container-fluid main">
-      <div class="row">
-        {% for plan in plans.all %}
-        <div class="col-md-4 ">
-          <div class="main">
-              <ul class="cards flex">
-                  <li class="cards_item content">
-                    <div class="card">
-                      <div class="card_image"><img  src="{{ plan.image.url}}"></div>
-                      <div class="card_content">
-                        <h2 class="card_title">{{plan.title}}</h2>
-                        <p class="card_text">{{plan.summary}}</p>            
-                        <a href="{% url 'plan' plan.id %}">
-                          <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-              </ul>
-            </div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="loadmore-wrapper">
-        <a href="#" id="loadMore">Load More</a>
-    </div>
-    </div>
+<div class="container text-center">
+    <img src="{{ beauty.image.url }}" alt="" height="500" width="800" alt="blog image">
+    <!-- <p class="text-lead py-2">
+        Did someone say meal prep ?
+    </p> -->
+<h1 class="py-3">{{ beauty.title}}</h1>
+<p>{{ beauty.text }}</p>
+</div>
+ {% include "components/social-icons.html" %}
 {% endblock %}

@@ -15,7 +15,7 @@ class FitnessPlan(models.Model):
     def __str__(self):
            return self.title
 
-class Fitness(models.Model):
+class FitnessBlog(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     summary = models.TextField(default='')
@@ -37,7 +37,7 @@ class Customer(models.Model):
         
 class Blog(models.Model):
     title = models.CharField(max_length=255)
-    text = models.TextField()
+    text = models.TextField(default=True)
     summary = models.TextField()
     image = CloudinaryField('image')
     date = models.DateTimeField()
@@ -48,7 +48,7 @@ class Blog(models.Model):
 class Food(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField()
+    text = models.TextField(default=True)
     image = CloudinaryField('image')
     date = models.DateTimeField()
     premium = models.BooleanField(default=True)
@@ -59,6 +59,7 @@ class Food(models.Model):
 class Health(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    text = models.TextField(default=True)
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -70,6 +71,7 @@ class Health(models.Model):
 class Love(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    text = models.TextField(default=True)
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -81,6 +83,7 @@ class Love(models.Model):
 class Beauty(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    text = models.TextField(default=True)
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -91,6 +94,7 @@ class Beauty(models.Model):
 class Culture(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
+    text = models.TextField(default=True)
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)

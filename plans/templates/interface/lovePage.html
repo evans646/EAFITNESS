@@ -1,8 +1,9 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-{% load static %}
-<h1  class="py-3 page-title"> Love page</h1>
-<div class="loadmore-wrapper">
-    <a href="#" id="loadMore">Load More</a>
+<div class="container text-center">
+    <img src="{{ love.image.url }}" alt="" height="500" width="800" alt="blog image">
+<h1 class="py-3">{{ love.title}}</h1>
+<p>{{ love.text }}</p>
 </div>
+ {% include "components/social-icons.html" %}
 {% endblock %}
