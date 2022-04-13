@@ -8,7 +8,6 @@ class FitnessPlan(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     summary = models.TextField(default='')
-    # image = models.ImageField(upload_to ='uploads/',default=True)
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
 
@@ -19,7 +18,6 @@ class FitnessBlog(models.Model):
     title = models.CharField(max_length=255)
     text = models.TextField()
     summary = models.TextField(default='')
-    # image = models.ImageField(upload_to ='uploads/',default=True)
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
 
@@ -33,11 +31,10 @@ class Customer(models.Model):
     cancel_at_period_end  = models.BooleanField(default=False)
     membership = models.BooleanField(default=False)
     
-
         
 class Blog(models.Model):
     title = models.CharField(max_length=255)
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     summary = models.TextField()
     image = CloudinaryField('image')
     date = models.DateTimeField()
@@ -48,7 +45,7 @@ class Blog(models.Model):
 class Food(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     image = CloudinaryField('image')
     date = models.DateTimeField()
     premium = models.BooleanField(default=True)
@@ -59,7 +56,7 @@ class Food(models.Model):
 class Health(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -71,7 +68,7 @@ class Health(models.Model):
 class Love(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -83,7 +80,7 @@ class Love(models.Model):
 class Beauty(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)
@@ -94,7 +91,7 @@ class Beauty(models.Model):
 class Culture(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    text = models.TextField(default=True)
+    text = models.TextField(default='')
     date = models.DateTimeField()
     image = CloudinaryField('image')
     premium = models.BooleanField(default=True)

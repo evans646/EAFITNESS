@@ -18,6 +18,9 @@ $(function(){
 });
 $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset() -100},"3000");return false})})
 
+var viewportHeight = $("body").innerHeight()
+console.log(viewportHeight)
+
 
    $('hr').css({
        "background-color": "#f86b24",
@@ -32,25 +35,6 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("
    "margin-left": "35%",
    "font-size":"12px"
   })
-  
-  const smallHeaderNavLinks= $('.small-nav-item  ');
-
-smallHeaderNavLinks.css({
-  "font-size":"3e"
-})
-
-  const userNameOnDisplay = $('.user-logged');
-  userNameOnDisplay.css({
-    "margin":"1%",
-    "padding-bottom":"2%"
-  })
-
-
-  const userNameOnDisplayLogo = $('.user-logged img');
-  userNameOnDisplayLogo.css({
-    "margin":"0.5%",
-  })
-
 
     // Show or hide the sticky footer button
     $(window).scroll(function() {

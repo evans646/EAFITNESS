@@ -1,128 +1,44 @@
-<style>
-.social-container {
-	margin: 50px auto;
-	width: 680px;
-}
-
-#social-sidebar {
-	left: 0;
-	margin-top: -75px; 
-	position: fixed;
-	top: 50%;
-}
-
-#social-sidebar li:first-child a { border-radius: 0 5px 0 0; }
-#social-sidebar li:last-child a { border-radius: 0 0 5px 0; }
-
-#social-sidebar a {
-	background: #121212;
-	color: #fff;
-	display: block;
-	height: 50px;
-	font-size: 18px;
-	line-height: 50px;
-	position: relative;
-	text-align: center;
-	width: 50px;
-}
-
-#social-sidebar a:hover span {
-	left: 130%;
-	opacity: 1;
-}
-
-#social-sidebar a span {
-	border-radius: 3px;
-	line-height: 24px;
-	left: -100%;
-	margin-top: -16px;
-	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter: alpha(opacity=0);
-	opacity: 0;
-	padding: 4px 8px;
-	position: absolute;
-	-webkit-transition: opacity .3s, left .4s;
-	-moz-transition: opacity .3s, left .4s;
-	-ms-transition: opacity .3s, left .4s;
-	-o-transition: opacity .3s, left .4s;
-	transition: opacity .3s, left .4s;
-	top: 50%;
-  white-space: nowrap;
-	z-index: -1;
-}
-
-#social-sidebar a span:before {
-	content: "";
-	display: block;
-	height: 8px;
-	left: -4px;
-	margin-top: -4px;
-	position: absolute;
-	top: 50%;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-	width: 8px;
-	z-index: -2;
-}
-
-#social-sidebar a[class*="facebook"]:hover,
-#social-sidebar a[class*="facebook"] span,
-#social-sidebar a[class*="facebook"] span:before { background: #3455aa; }
-
-#social-sidebar a[class*="twitter"]:hover,
-#social-sidebar a[class*="twitter"] span,
-#social-sidebar a[class*="twitter"] span:before { background: #00aced; }
-
-#social-sidebar a[class*="gplus"]:hover,
-#social-sidebar a[class*="gplus"] span,
-#social-sidebar a[class*="gplus"] span:before { background: #dd4b39; }
-
-#social-sidebar a[class*="github"]:hover,
-#social-sidebar a[class*="github"] span,
-#social-sidebar a[class*="github"] span:before { background: #323131; }
-
-#social-sidebar a[class*="rss"]:hover,
-#social-sidebar a[class*="rss"] span,
-#social-sidebar a[class*="rss"] span:before { background: #f69536; }
- 
-</style>
-
 <div class="social-container">
-		
   <nav id="social-sidebar">
-
     <ul>
-
-<li>
-        <a href="https://facebook.com/hickhacks" class="entypo-facebook" target="_blank">
+      <li>
+        <a
+          href="https://facebook.com/hickhacks"
+          class="entypo-facebook"
+          target="_blank"
+        >
           <span>Facebook</span>
+          <i class="fa-brands fa-facebook fa-xl"></i>
         </a>
       </li>
-      
+
       <li>
-        <a href="https://twitter.com/HickHacks1" class="entypo-twitter" target="_blank">
+        <a
+          href="https://twitter.com/HickHacks1"
+          class="entypo-twitter"
+          target="_blank"
+        >
           <span>Twitter</span>
+          <i class="fa-brands fa-twitter-square fa-xl"></i>
         </a>
       </li>
 
       <li>
-        <a href="https://plus.google.com/117848122154379646848" class="entypo-gplus" target="_blank">
+        <a
+          href="https://plus.google.com/117848122154379646848"
+          class="entypo-gplus"
+        >
           <span>Google+</span>
+          <i class="fa-brands fa-google-plus-square fa-xl"></i>
         </a>
       </li>
-
       <li>
-        <a href="https://github.com/HickHacks" class="entypo-github" target="_blank">
-          <span>Github</span>
-        </a>
-      </li>
-      
-      <li>
-        <a href="http://hickhacks.blogspot.in/feeds/posts/default?alt=rss" class="entypo-rss" target="_blank">
+        <a
+          href="http://hickhacks.blogspot.in/feeds/posts/default?alt=rss"
+          class="entypo-rss"
+        >
           <span>RSS</span>
+          <i class="fa-solid fa-square-rss fa-xl"></i>
         </a>
       </li>
     </ul>
