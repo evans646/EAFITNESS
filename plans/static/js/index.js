@@ -21,7 +21,6 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("
 var viewportHeight = $("body").innerHeight()
 console.log(viewportHeight)
 
-
    $('hr').css({
        "background-color": "#f86b24",
         "width":"80%",
@@ -31,7 +30,7 @@ console.log(viewportHeight)
    const smallHeaderNav = $('.small-navs-wrapper ul ');
 
    smallHeaderNav.css({
-    "margin":"0%",
+   "margin":"0%",
    "margin-left": "35%",
    "font-size":"12px"
   })

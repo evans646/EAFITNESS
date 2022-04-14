@@ -13,7 +13,7 @@
         line-height: 40px;
         width: 40px;
         margin-bottom: 1px;
-        z-index: 2;
+        z-index: 1;
      }
      #fixed-social a:hover>span{
        visibility: visible;

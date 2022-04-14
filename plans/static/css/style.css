@@ -240,7 +240,6 @@ a:hover {
   position: relative;
   min-width: 8.23em;
   text-decoration: none;
-  font-family: var(--font);
   font-size: 1.25rem;
 }
 
@@ -308,6 +307,9 @@ h5 {
   text-align: center;
   font-size: 2.5em;
 }
+.page-lead{
+  color:#068359 !important;
+}
 
 .hr-line {
   display: flex;
@@ -335,6 +337,7 @@ h5 {
   margin-left: 45%;
   filter: url("#goo");
 }
+
 #loadMore {
   display: inline-block;
   text-align: center;

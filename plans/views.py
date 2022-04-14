@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from stripe.api_resources import customer, subscription
+# from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
@@ -7,10 +7,10 @@ from .models import Beauty, FitnessPlan,Customer,Blog,Food,Health,Culture,Love,F
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
-from django.core.mail import send_mail
 
 import stripe
 stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53rjWyuIV9maaKp4Qn9VpO7RE5A8wX2QCcEJo006qsqVE3X'
+
 
 #only super users can access this account
 @user_passes_test(lambda u: u.is_superuser)
@@ -131,10 +131,11 @@ def love(request,pk):
     else:
        return render(request, 'interface/lovePage.html', {'love':love})
 
-
 def cultureBlogs(request):
     cultureBlogs = Culture.objects
     return render(request,'interface/cultureBlogs.html',{'cultureBlogs':cultureBlogs})
+
+
 
 def culture(request,pk):
     culture = get_object_or_404(Culture,pk=pk)
@@ -269,7 +270,7 @@ class SignUp(generic.CreateView):
     form_class = CustomSignupForm
     success_url = reverse_lazy('home')
     template_name = 'registration/signup.html'  
-
+  
     def form_valid(self, form):
         valid = super(SignUp, self).form_valid(form)
         username, password = form.cleaned_data.get('username'), form.cleaned_data.get('password1')

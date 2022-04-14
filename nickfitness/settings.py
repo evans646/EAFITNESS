@@ -29,17 +29,7 @@ SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 # SECURITY WARNING: don't run with debug turned on in production!
 
 DEBUG =True
-
-
 SITE_ID = 1
-
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER ='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'
-# EMAIL_HOST_PASSWORD =1122
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
 
 
 ALLOWED_HOSTS = ['127.0.0.1', '.herokuapp.com']
@@ -59,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'plans',
     'fontawesomefree',
-     'cloudinary'
+     'cloudinary',
 ]
 
 
