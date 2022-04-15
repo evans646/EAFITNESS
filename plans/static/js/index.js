@@ -8,7 +8,6 @@ $(function(){
       }
     });
     
-
   $(window).scroll(function() {
     if ($(this).scrollTop() > 50 ) {
         $('.scrolltop:hidden').stop(true, true).fadeIn();
@@ -20,6 +19,7 @@ $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$("
 
 var viewportHeight = $("body").innerHeight()
 console.log(viewportHeight)
+
 
    $('hr').css({
        "background-color": "#f86b24",
@@ -53,3 +53,8 @@ console.log(viewportHeight)
 
 
   
+
+
+
+
+ 
