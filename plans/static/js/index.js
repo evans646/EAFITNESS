@@ -17,21 +17,17 @@ $(function(){
 });
 $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset() -100},"3000");return false})})
 
-var viewportHeight = $("body").innerHeight()
-console.log(viewportHeight)
-
-
    $('hr').css({
        "background-color": "#f86b24",
         "width":"80%",
         "margin-left":"50px",
         "height":"1px"
    });
-   const smallHeaderNav = $('.small-navs-wrapper ul ');
 
+   const smallHeaderNav = $('.small-navs-wrapper ul ');
    smallHeaderNav.css({
    "margin":"0%",
-   "margin-left": "35%",
+   "margin-left": "25%",
    "font-size":"12px"
   })
 

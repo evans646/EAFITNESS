@@ -34,17 +34,17 @@ urlpatterns = [
     path('about', views.about, name='about'),
     path('blog', views.blog, name='blog'),
     path('fitness', views.fitnessBlogs, name='fitnessBlogs'),
-    path('fitness/<int:pk>', views.fitness, name='fitness'),
+    path('story=/fitness/<int:pk>', views.fitness, name='fitness'),
     path('food', views.foodsPage, name='foodsPage'),
-    path('foods/<int:pk>',views.food,name='food'),
+    path('story=/food/<int:pk>',views.food,name='food'),
     path('health', views.healthBlogs, name='healthBlogs'),
-    path('health/<int:pk>', views.health, name='health'),
+    path('story=/health/<int:pk>', views.health, name='health'),
     path('love', views.loveBlogs, name='loveBlogs'),
-    path('love/<int:pk>', views.love, name='love'),
+    path('story=/love/<int:pk>', views.love, name='love'),
     path('beauty', views.beautyBlogs, name='beautyBlogs'),
-    path('beauty/<int:pk>', views.beauty, name='beauty'),
+    path('story=/beauty/<int:pk>', views.beauty, name='beauty'),
     path('culture', views.cultureBlogs, name='cultureBlogs'),
-    path('culture/<int:pk>', views.culture, name='culture'),
+    path('story=/culture/<int:pk>', views.culture, name='culture'),
     path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail')
 ]
 
