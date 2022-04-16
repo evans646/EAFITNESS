@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 {% include "interface/carousel.html" %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center container">
     <section>
         <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
             <h5><i class="fa-solid fa-quote-left"></i>If you think lifting is dangerous, try being weak. Being weak is dangerous. </h5>
@@ -10,40 +10,56 @@
           </div>    
 </section>
 </div>
-<section class="container-fluid px-0">
-  <div class="row align-items-center">
-      <div class="col-md-6 order-2 order-md-1">
-          <img class="user-photo img-fluid" src="{% static 'images/fitness.jpeg' %}" height="150"  width="600" style="margin-left: 50px;"/>
-      </div>
-      <div class="col-md-6 text-center order-1 order-md-2">
-          <div class="row justify-content-center">
-              <div class="col-10 col-lg-8 blurb  ">
-                  <h2>Ready, sweat, go!</h2>
-                  <p class="lead text-dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae beatae, maiores deserunt in voluptatibus aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur repellat eveniet quidem
-                      voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam autem nam ex deserunt debitis eaque ratione! Nobis, quidem assumenda.</p>
-              </div>
-          </div>
-         <div class="gopremium-wrapper">
-            <a class="button"  href="{% url 'join' %}">Go premium <i class="fa-solid fa-dumbbell fa-lg"> </i></a>
+
+<section class=" px-0">
+    <div class="container-fluid">
+    <div class="row align-items-center ">
+        <div class="col-md-6 order-2 order-md-1">
+            <img  src="{% static 'images/fitness.jpeg' %}" alt="" class="img-fluid" height="150"  width="700">
         </div>
-      </div>
-  </div>
-  <div class="row align-items-center">
-      <div class="col-md-6 text-center">
-          <div class="row justify-content-center">
-              <div class="col-10 col-lg-8 blurb  ">
-                  <h2>Set impossible goals, and then prove yourself wrong.</h2>
-                  <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae beatae, maiores deserunt in voluptatibus aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur repellat eveniet quidem
-                      voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam autem nam ex deserunt debitis eaque ratione! Nobis, quidem assumenda.</p>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-6">
-          <img class="user-photo img-fluid" src="{% static 'images/fitness1.jpeg' %}" height="150"  width="600"  style="margin-left: 50px;" />
-      </div>
-  </div>
-  {% include "interface/blogs.html" %}
+        <div class="col-md-6 text-center order-1 order-md-2">
+            <div class="row justify-content-center">
+                <div class="col-6 col-lg-8 blurb mb-5 mb-md-0">
+                    <h2>Set impossible goals, and then prove yourself wrong.</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
+                        beatae, maiores deserunt
+                        in voluptatibus
+                        aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
+                        repellat eveniet quidem
+                        voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
+                        autem nam ex deserunt debitis
+                        eaque ratione! Nobis, quidem assumenda.</p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <div class="col-md-6 text-center">
+            <div class="row justify-content-center">
+                <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
+                    <h2>Ready, sweat, go!</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
+                        beatae, maiores deserunt
+                        in voluptatibus
+                        aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
+                        repellat eveniet quidem
+                        voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
+                        autem nam ex deserunt debitis
+                        eaque ratione! Nobis, quidem assumenda.</p>
+                </div>
+            </div>
+            <div class="gopremium-wrapper">
+                <a class="button"  href="{% url 'join' %}">Go premium <i class="fa-solid fa-dumbbell fa-lg"> </i></a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img   src="{% static 'images/fitness1.jpeg' %}" alt="" class="img-fluid" height="150">
+        </div>
+    </div>
+    </div>
 </section>
+  {% include "interface/blogs.html" %}
 <a href="#" class="go-top">Go Top</a>
 {% endblock %}
 

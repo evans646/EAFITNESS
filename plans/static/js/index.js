@@ -17,7 +17,8 @@ $(function(){
 });
 $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset() -100},"3000");return false})})
 
-   $('hr').css({
+//the header line betwen the top itmes and small navs 
+$('hr').css({
        "background-color": "#f86b24",
         "width":"80%",
         "margin-left":"50px",

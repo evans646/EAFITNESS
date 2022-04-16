@@ -321,6 +321,7 @@ h5 {
   flex: 1;
   border-bottom: 5px solid;
   margin: auto 0.25em;
+  color:#f86b24
 }
 
 .flex {
@@ -672,7 +673,7 @@ a:hover {
   font-weight: 900;
   letter-spacing: 0.1em;
   line-height: 18px;
-  padding: 12px 30px;
+  padding: 10px 20px;
   margin: 0 10px 10px 0;
   text-decoration: none;
   text-transform: uppercase;
