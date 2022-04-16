@@ -3,12 +3,12 @@
 <h4>Premium fitness website</h4>
 
 <p>
-On the home page , you should be able to click on some of articles but some are  premium contents so you will need to activate premium in order to have access to those contents
+Some of teh stories/ blogs are  premium contents so you will need to activate premium in order to have access to those contents
 </p>
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership/ premium</li>
-    <li>Users can use promo codes/ coupons to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME etc</li>
-    <li>Users can also cancel their membership prematurely which will run to the end of the billing cycle. eg Yearly/Monthly</li>
+    <li>Users can use promo codes/ coupons to get percentages off their premium subscriptions eg. HALLOWEEN,WELCOME,EVANSREFERAL etc</li>
+    <li>Users can also cancel their membership prematurely which will run to the end of theIR billing cycle. eg Yearly/Monthly</li>
 </ul>
 
 <p>This project also features Django Authentication and Authorization as users needs to be authenticated before they can subscribe to premium</p>
