@@ -1,0 +1,61 @@
+{% load static %}
+<section class="top-header" style="height: 5% !important;">
+  <div>
+    <p style="color: #000000;padding: 13px;font-weight: bold;">
+      Stay connected
+      <a href="#" target="_blank">
+        <i
+          class="fa-brands fa-facebook-square fa-lg"
+          style="color: #3b5998;"
+        ></i>
+      </a>
+      <a class="" href="#" target="_blank">
+        <i class="fa-brands fa-linkedin fa-lg" style="color: #0072b1"></i>
+      </a>
+      <a href="#" target="_blank">
+        <i
+          class="fa-brands fa-twitter-square fa-lg"
+          style="color: #1d9bf0"
+        ></i>
+      </a>
+      <a href="#" target="_blank">
+        <i
+          class="fa-brands fa-youtube-square fa-lg"
+          style="color: #b2071d"
+        ></i>
+      </a>
+    </p>
+  </div>
+  <div class="col-user" style="margin-left: 75%;">
+    <div class="top-header-links">
+      {% if user.is_authenticated %}
+      <span class="user-logged">
+        <p class="header-top-items" style="color: #000000;padding-top: 13px;font-weight: bold;">
+          <img
+            src="{% static 'images/user-loggedin.png' %}"
+            width="20"
+            height="20"
+          />
+          Hi, {{user.username}}
+        </p>
+      </span>
+      {%else%}
+      <span class="user-logged">
+        <p style="color: #000000;padding-top: 13px;font-weight: bold;">
+          <img src="{% static 'images/user.png' %}" width="20" /> Not signed
+          in
+        </p>
+      </span>
+      {%endif%}
+    </div>
+</div>
+</section>
+  <!-- header / hero -->
+  <header class="hero" id="home">
+    <!-- <img src="{% static 'images/carosel.jpeg' %}" alt="ocean ecosystems"> -->
+    <article>
+      <div class="gopremium-wrapper">
+        <a class="header-button"  href="{% url 'join' %}">Premium <i class="fa-solid fa-dumbbell fa-lg"> </i></a>
+    </div>
+    </article>
+  </header>
