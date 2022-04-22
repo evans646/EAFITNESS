@@ -1,9 +1,8 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<div class="container"  style="display: block;margin: 6% auto;">
-  <div class="row justify-content-center">
-      <div class="col-md-4 order-md-2 mb-4">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
+<div class="checkout-wrapper">
+      <div style="padding:5%">
+        <h4  style="display:flex;justify-content:space-between; margin-bottom:3px;align-items:center !important;">
           <span class="text-muted">Your cart</span>
           <span class="badge badge-secondary badge-pill">1</span>
         </h4>
@@ -16,31 +15,31 @@
             <span class="text-muted">${{og_dollar}}</span>
           </li>
           {% if coupon != 'none' %}
-          <li class="list-group-item d-flex justify-content-between bg-light">
-            <div class="text-success">
+          <li  style="display:flex;justify-content:space-between;background-color:bisque">
+            <div style="color:green">
               <h6 class="my-0">Promo code</h6>
               <small>{{coupon|upper}}</small>
             </div>
-            <span class="text-success">-${{coupon_dollar}}</span>
+            <span  style="color:green">-${{coupon_dollar}}</span>
           </li>
           {% endif %}
-          <li class="list-group-item d-flex justify-content-between">
+          <li style="display:flex;justify-content:space-between !important">
             <span>Total (USD)</span>
             <strong>${{final_dollar}}</strong>
           </li>
         </ul>
         
         <form class="card p-2" action="{% url 'checkout' %}" method="GET">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Promo code" name="coupon" style="outline: none !important;">
+          <div class="input-group" style="display:flex">
+            <input type="text" class="checkout-form-control" placeholder="Promo code" name="coupon" >
             <input type="hidden" value="{{plan}}" name="plan" />
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary" style="background-color:black;border-radius: 5px;">Redeem</button>
+            <div>
+              <button type="submit" class="redeem-btn">Redeem</button>
             </div>
           </div>
         </form>
  
-        <div class="text-center pt-3">
+        <div class="text-center pt-3" style="padding-top:10px">
         <form action="{% url 'checkout' %}" method="POST">
           {% csrf_token %}
           <script
@@ -58,7 +57,9 @@
         </form>
         </div>
         </div>
+
       </div>
+
       </div>
 {% endblock %}
 

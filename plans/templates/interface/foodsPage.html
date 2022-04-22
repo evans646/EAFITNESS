@@ -1,38 +1,27 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1 class=" py-3 page-title">Food</h1>
-<p class="text-center page-lead">
-  Did someone say meal prep?
-</p>
-{% load static %}
-<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
-  <div class="container-fluid main">
-      <div class="row">
-        {% for food in foods.all %}
-        <div class="col-md-4 ">
-          <div class="main">
-              <ul class="cards flex">
-                  <li class="cards_item content">
-                    <div class="card">
-                      <div class="card_image"><img  src="{{ food.image.url}}"></div>
-                      <div class="card_content">
-                        <h2 class="card_title">{{food.name}}</h2>
-                        <p class="card_text">{{food.description}}</p>            
-                        <a href="{% url 'food' food.id %}">
-                            <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-                <!-- </a> -->
-              </ul>
-            </div>
-        </div>
-        {% endfor %}
-      </div>
-      <div class="loadmore-wrapper">
-        <a href="#" id="loadMore">Load More</a>
-      </div>
-    </div>
+<div class="page-wrapper">
+  <section class="blogs" id="blogs">
+    <h1 class="page-title">Food</h1>
+    <p class="text-center page-lead">
+      Did someone say meal prep?
+    </p>
+    <ul class="blogList">
+      {%for loveBlog in loveBlogs.all%}
+       <li>
+        <img src="{{ loveBlog.image.url}}" alt="humpback whales">
+        <h3>{{loveBlog.title}}</h3>
+        <p>{{loveBlog.summary}}</p>
+        <a  href="{% url 'food' foodBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
+      </li>
+      {%endfor%}
+      </ul>
+  </section>
+  {%if loveBlogs.all%}
+  <div class="loadmore-wrapper">
+      <a href="#" id="loadMore">Load More</a>
+  </div>
+  {%endif%}
+</div>
 {% endblock %}

@@ -1,58 +1,47 @@
 {% load static %}
-<section class="top-header" style="height: 5% !important;">
-  <div>
-    <p style="color: #000000;padding: 13px;font-weight: bold;">
+<section style="height: 4.7% !important;display: flex;background-color:aliceblue">
+  <div style="margin-top:5px;font-size:1.2em;padding-left: 5px;  font-family: Righteous, cursive;">
+    <span>
       Stay connected
-      <a href="#" target="_blank">
+    </span>
+      <a href="#" target="_blank" class="top-header-icon" style="text-decoration:none">
         <i
           class="fa-brands fa-facebook-square fa-lg"
           style="color: #3b5998;"
         ></i>
       </a>
-      <a class="" href="#" target="_blank">
+      <a  href="#" target="_blank" class="top-header-icon" >
         <i class="fa-brands fa-linkedin fa-lg" style="color: #0072b1"></i>
       </a>
-      <a href="#" target="_blank">
+      <a href="#" target="_blank" class="top-header-icon" >
         <i
           class="fa-brands fa-twitter-square fa-lg"
           style="color: #1d9bf0"
         ></i>
       </a>
-      <a href="#" target="_blank">
+      <a href="#" target="_blank" class="top-header-icon" >
         <i
           class="fa-brands fa-youtube-square fa-lg"
           style="color: #b2071d"
         ></i>
       </a>
-    </p>
   </div>
-  <div class="col-user" style="margin-left: 75%;">
-    <div class="top-header-links">
+
+  <div  style="margin-top:5px;font-size:1.2em;margin-left: auto; font-family: Righteous, cursive;">
       {% if user.is_authenticated %}
-      <span class="user-logged">
-        <p class="header-top-items" style="color: #000000;padding-top: 13px;font-weight: bold;">
-          <img
-            src="{% static 'images/user-loggedin.png' %}"
-            width="20"
-            height="20"
-          />
+      <span style="padding:4px">
           Hi, {{user.username}}
-        </p>
       </span>
       {%else%}
-      <span class="user-logged">
-        <p style="color: #000000;padding-top: 13px;font-weight: bold;">
-          <img src="{% static 'images/user.png' %}" width="20" /> Not signed
-          in
-        </p>
-      </span>
+        <span style="padding: 4px;font-size:1em">
+          Not signed in
+        </span>
       {%endif%}
-    </div>
-</div>
+  </div>
 </section>
+
   <!-- header / hero -->
   <header class="hero" id="home">
-    <!-- <img src="{% static 'images/carosel.jpeg' %}" alt="ocean ecosystems"> -->
     <article>
       <div class="gopremium-wrapper">
         <a class="header-button"  href="{% url 'join' %}">Premium <i class="fa-solid fa-dumbbell fa-lg"> </i></a>

@@ -1,12 +1,9 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<div class="container text-center">
+<div class="stories-page-wrapper">
     <img src="{{ food.image.url }}" alt="" height="500" width="800" alt="blog image">
-    <p class="text-lead py-2" style="font-size:2em">
-        Did someone say meal prep ?
-    </p>
-<h1 class="py-3">{{ food.name}}</h1>
-<p class="page-description">{{ food.description}}</p>
+<h1>{{ food.name}}</h1>
+<p class="stories-page-description">{{ food.description}}</p>
 <p>{{ food.text }}</p>
 </div>
  {% include "components/social-icons.html" %}

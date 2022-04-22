@@ -59,11 +59,9 @@ i {
  padding-left: .5rem;
 }
 
-/* .top-header{
-  height: 12% !important;
-  background-color: rgb(250, 244, 235);
-} */
-
+.top-header-icon{
+  text-decoration: none;
+}
 /* hero  */
 .hero {
  background: url("../images/header.jpeg") no-repeat center right !important;
@@ -357,8 +355,8 @@ nav .btn:hover {
  color: #fff;
 }
 .logo {
-  max-width: 75px;
-  padding: 5px 5px;
+  max-width: 70px;
+  padding: 7px 7px;
  }
 
 /* ############ 4. Trips ############ */
@@ -503,6 +501,66 @@ text-align: center;
 .content {
   display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.checkout-wrapper{
+  display: flex;
+  width: 70%;
+justify-content: center;
+  margin: 5% auto;
+  border: 1px solid red;
+  height: 50%;
+  background-color: beige;
+}
+.checkout-form-control{
+  outline: none !important;border: 1px solid red;width: 100%;display:flex
+}
+.redeem-btn{
+  background-color:black;border-radius: 5px; margin-left: 15px; padding: 10px;width: 100%;cursor:pointer;
+  color:white
+}
+
+.a1{display: flex;
+  margin-top: 5px ;
+  margin-left: 50%;
+  text-align: center;
+  justify-content: center;}
+
+/* .a2{background-color: #808080;
+  border-radius: 0px 6px 6px 0px;
+  margin: 14.8px 0px 0px -1px;
+  color: white;
+  letter-spacing: 1px;
+  padding: 2.5px 5px 0px 5px;
+  height: 21.5px;
+  transform: skew(170deg);} */
+
+.fa-crown{font-size: 42px;
+ color: #FFD114;}
+
+
+
 
 /* scroll-top */
 .go-top {

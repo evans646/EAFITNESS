@@ -24,7 +24,7 @@
   margin: 0 0 15px 0;
   font-size: 30px;
   font-weight: 700;
-  color:  #068359 !important;
+  color:  #0c4147 !important; 
 }
 
 h2 img {
@@ -50,11 +50,6 @@ p {
   border: 1px solid #ffffff;
   transition: .3s;
   -webkit-transition: .3s;
-}
-
-.btn:hover {
-  color:  #068359;
-  background: #ffffff;
 }
 
 .col-left,
@@ -108,7 +103,7 @@ p {
 }
 
 .login-form p a {
- color: #068359 !important;
+ color: #0c4147;
   font-size: 14px;
   text-decoration: none;
 }
@@ -152,13 +147,9 @@ p {
 
 .login-form input.btn {
   color: #ffffff;
-  background: #068359 !important;
-  border-color:  #068359;
+  background:#0f8896 ;
+  border-color:  #0c4147;
   outline: none;
   cursor: pointer;
 }
 
-.login-form input.btn:hover {
-  color: #068359 !important;
-  background: #ffffff;
-}

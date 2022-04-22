@@ -1,43 +1,36 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {%load static%}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-5 py-3"><b>EA </b>Fitness Premium</h1>
-  <p class="container">
+<section class="join">
+  <h1 class="join-header"><b>EA </b>Fitness Premium</h1>
+  <p>
     Get the body you've always dreamed of. Live the healthy life that you know you should. From workouts to nutrition, 
-    you have all the tools you need to succeed. It's all yours with <b> EA </b>Fitness Premium.
+   <br/> you have all the tools you need to succeed. It's all yours with <b> EA </b>Fitness Premium.
   </p>
-</div>
-<div class="container">
-<section class="purchase" id="buy-now">
-  <div class="container">
-    <ul>
-      <li>
-        <a  href="{%url 'checkout'%}?plan=monthly">
-          <strong>Monthly</strong>
-          <span class="purchase-description">Detailed Workout Plans</span>
-          <span class="purchase-description">Detailed Workout Plans</span>
-          <span class="purchase-description">Nutrition Guides</span>
-          <span class="purchase-description">Scientific Studies Breakdown</span>
-          <span class="purchase-description">6 Months Email Support</span>
-          <big class="purchase-price">$10 <small class="text-muted">/ mo</small></big>
-          <button  type="button" class="purchase-button" style="background-color:#252129;outline: none;"><a href="{%url 'checkout'%}?plan=monthly">Buy Now</a></button>
-        </a>
+</section>
+<div class="pricing-container">
+  <div class="pricing-columns">
+    <ul class="plan-price">
+      <li class="plan-header" style="background-color:#094049;">Monthly</li>
+      <li class="grey">$10 / month
       </li>
-      <li>
-        <a  href="{%url 'checkout'%}?plan=yearly">
-          <strong>Yearly <br/><span> Save $20! with coupon #evansreferal</span></strong>
-          <span class="purchase-description">Detailed Workout Plans</span>
-          <span class="purchase-description">Weekly Members Only Email</span>
-          <span class="purchase-description">Nutrition Guides</span>
-          <span class="purchase-description">Scientific Studies Breakdown</span>
-          <span class="purchase-description">1 Year Email Support</span>
-          <big class="purchase-price">$100 <small class="text-muted">/yr</small></big>
-        <button  type="button" class="purchase-button" style="background-color:#252129;outline: none;"><a href="{%url 'checkout'%}?plan=yearly">Buy Now</a></button>
-        </a>
-      </li>
+      <li>Detailed Workout Plans</li>
+      <li>Nutrition Guides</li>
+      <li>Scientific Studies Breakdown</li>
+      <li>Monthy Email Support</li>
+      <li class="grey"><a  href="{%url 'checkout'%}?plan=monthly" class="pricing-button">Subscribe</a></li>
     </ul>
   </div>
-</section>
+  <div class="pricing-columns">
+    <ul class="plan-price">
+      <li class="plan-header">Yearly</li>
+      <li class="grey">$100/ year</li>
+      <li>Detailed Workout Plans</li>
+      <li>Nutrition Guides</li>
+      <li>Scientific Studies Breakdown</li>
+      <li>1 Year Email Support</li>
+      <li class="grey"><a  href="{%url 'checkout'%}?plan=yearly" class="pricing-button">Subscribe</a></li>
+    </ul>
+  </div>
 </div>
 {% endblock %}

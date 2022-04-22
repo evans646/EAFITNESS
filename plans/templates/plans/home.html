@@ -1,65 +1,162 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-{% load static %}
-{% include "interface/carousel.html" %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center container">
-    <section>
-        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h5><i class="fa-solid fa-quote-left"></i>If you think lifting is dangerous, try being weak. Being weak is dangerous. </h5>
-            <p class="lead " style="color:#068359!important;">Fitness Is Fun</p>
-          </div>    
-</section>
-</div>
-
-<section class=" px-0">
-    <div class="container-fluid">
-    <div class="row align-items-center ">
-        <div class="col-md-6 order-2 order-md-1">
-            <img  src="{% static 'images/fitness.jpeg' %}" alt="" class="img-fluid" height="150"  width="700">
-        </div>
-        <div class="col-md-6 text-center order-1 order-md-2">
-            <div class="row justify-content-center">
-                <div class="col-6 col-lg-8 blurb mb-5 mb-md-0">
-                    <h2>Set impossible goals, and then prove yourself wrong.</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                        beatae, maiores deserunt
-                        in voluptatibus
-                        aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                        repellat eveniet quidem
-                        voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                        autem nam ex deserunt debitis
-                        eaque ratione! Nobis, quidem assumenda.</p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="row align-items-center">
-        <div class="col-md-6 text-center">
-            <div class="row justify-content-center">
-                <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                    <h2>Ready, sweat, go!</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iste molestiae
-                        beatae, maiores deserunt
-                        in voluptatibus
-                        aspernatur architecto excepturi delectus soluta? Ipsa, deleniti dolorem hic consequatur
-                        repellat eveniet quidem
-                        voluptate necessitatibus dolorum delectus minus vitae, ut, veritatis sint ipsum magnam
-                        autem nam ex deserunt debitis
-                        eaque ratione! Nobis, quidem assumenda.</p>
-                </div>
-            </div>
-            <div class="gopremium-wrapper">
-                <a class="button"  href="{% url 'join' %}">Go premium <i class="fa-solid fa-dumbbell fa-lg"> </i></a>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <img   src="{% static 'images/fitness1.jpeg' %}" alt="" class="img-fluid" height="150">
-        </div>
-    </div>
-    </div>
-</section>
-  {% include "interface/blogs.html" %}
-<a href="#" class="go-top">Go Top</a>
+{%load static%}
+  <main>
+  <section class="home-content">
+    <h1>EA FITNESS</h1>
+    <h4>
+      “A little progress each day adds up to big results”
+    </h4>
+    <i class="fa-solid fa-dumbbell" style="font-size:2em;margin-top: 1%;color:#0F8896"></i>
+  </section>
+    <section class="blogs" id="blogs">
+      <h1 class="hr-line">What's Popular In Fitness</h1>
+      <article>
+        <p>
+          We have blogs to guide you on how to take control and over your body and gain the confidence you want 
+        </p>
+      </article>
+      <ul class="blogList">
+          {%for plan in plans.all%}
+         <li>
+          <img src="{{ plan.image.url}}" alt="blog image">
+          <h3 id="page-title">{{plan.title}}</h3>
+          <p id="page-desc">{{plan.summary}}</p>
+          <a  href="{% url 'plan' plan.id %}">
+           Read more
+            <i class="fa-solid fa-dumbbell teamIcon"></i>
+          </a>
+        </li>
+        {%endfor%}
+        </ul>
+    </section>
+  
+  
+    <!-- CTA1 -->
+    <section class="cta cta1">
+      <h1>Experience</h1>
+      <p>Our trainers are qualified enough to give you the right training that is enough to make you reach your goal in body building</p>
+    </section>
+  
+    <!-- Team -->
+    <section class="team" id="team">
+      <h1> 
+        <i class="fa-solid fa-dumbbell teamIcon"></i><br/>
+        Know more about us.
+      </h1>
+      <ul class="teamMembers">
+        <li><img  src="{% static 'images/team.jpeg' %}" alt="team member"></li>
+        <li><img  src="{% static 'images/team1.jpeg' %}" alt="team member"></li>
+        <li><img  src="{% static 'images/team2.jpeg' %}" alt="team member"></li>
+        <li><img  src="{% static 'images/team.jpeg' %}" alt="team member"></li>
+      </ul>
+      <p>
+        We have the best Coaches and fitness trainers to help you get the ebst result in the time as you need Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Dignissimos a sit tenetur exercitationem laudantium. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, reprehenderit
+        <a href="#" class="tomore-btn">Meet our Coaches</a></p>
+    </section>
+    <!-- CTA2 -->
+    <section class="cta cta2">
+      <h1>Education</h1>
+      <p>
+        Fitness means different things to different people and Health has something for everyone, whether you're just getting started with a workout
+         routine or have been training since before TikTok was a thing.
+        Get our latest expert moves, pro-tips, and recommendations for who to follow and where to look for essentials.
+      </p>
+    </section>
+  
+    <!-- Problem -->
+    <section class="problem" id="problem">
+      <h1>Personal training</h1>
+      <p>
+        Whether you’d like more personal training sessions with your current coach or are just getting started with virtual
+         or in-club personal training, log in now to see the fitness offers available at gyms near you.
+      </p>
+      <h3>Here are just  few things to expect</h3>
+      <ul>
+        <li>It is designed to fit your training style</li>
+        <li>Virtual Personal Training </li>
+        <li>Virtual Group Training</li>
+      </ul>
+    </section>
+  
+  
+    <!-- Actions -->
+    <section class="action">
+      <article>
+        <h1>Group Training</h1>
+        <p>
+          Be the first to experience our exclusive new group training program, designed to keep you inspired and progressing with ever-changing workouts designed by experts. Join us in our exclusive training space. With dedicated coaches and exciting group energy, you’ll finish feeling on top of the world.
+        </p>
+      </article>
+      <h1 class="pages-title">
+        The Best guides. For Your Effective Results.
+      </h1>
+      <P>
+        Get back to the gym and back to your best with EA Fitness. Our contents are waiting for you, with thousands of square feet of premium strength and cardio equipment, turf zones, lap pools, steam rooms and more. And with expert coaching and our app at the ready, you’ll have 24/7 support to help you get results.
+      </P>
+      <ul>
+        <li>
+          <h1></h1>
+          <h4>Fitness</h4>
+          <p>
+           Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus et aspernatur dolore nulla repudiandae, exercitationem vero.
+            Veritatis fugiat qui non veniam id eligendi? Itaque tenetur fuga quis? Veniam, temporibus voluptatibus!
+              <a href="{% url 'fitnessBlogs' %}" class="tomore-btn">Learn more</a>
+            </p>
+        </li>
+        <li>
+          <h1></h1>
+          <h4>Food</h4>
+          <p>
+          Food is esseential Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias excepturi omnis dolores maiores enim, veniam deleniti alias ipsum voluptatum, 
+          iure placeat at soluta quidem iusto laborum molestiae atque aliquid inventore.
+             <a href="{% url 'foodsPage' %}"  class="tomore-btn">Learn more</a>
+          </p>
+        </li>
+        <li>
+          <h1></h1>
+          <h4>Love</h4>
+          <p>Do you Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, nisi? At nam, voluptatibus accusamus aspernatur odit quo eveniet placeat ex autem,
+             eligendi itaque nostrum possimus sapiente, iusto sint vero dolorem nulla! Reprehenderit.
+             <a href="{% url 'loveBlogs' %}"  class="tomore-btn">Learn more</a>
+            </p>
+        </li>
+        <li>
+          <h1></h1>
+          <h4>Health</h4>
+          <p>Every year, governments spend billions Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet. Fugit numquam molestias ullam voluptatem at obcaecati incidunt, nemo libero maxime 
+            deleniti dolorem nostrum porro consequatur commodi nam dolores laborum, cumque tenetur!
+            <a href="{% url 'healthBlogs' %}"  class="tomore-btn">Learn more</a>
+          </p>
+        </li>
+        <li>
+          <h1></h1>
+          <h4>Beauty</h4>
+          <p>Today, only 2% of Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium nobis repudiandae quaerat eum neque, eos iste quibusdam dolores ad accusamus
+             repellendus distinctio dicta cum vel ipsam, est reiciendis libero id!
+            <a href="{% url 'beautyBlogs' %}"  class="tomore-btn">Learn more</a>
+          </p>
+        </li>
+        <li>
+          <h1></h1>
+          <h4>Culture</h4>
+          <p>Our apex predators, Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, enim? Tenetur beatae vero architecto iste blanditiis ipsum cupiditate enim assumenda dignissimos reprehenderit. 
+            Similique illo voluptatem officia facere, iste quasi totam.
+             <a href="{% url 'cultureBlogs' %}"  class="tomore-btn">Learn more</a>
+            </p>
+        </li>
+      </ul>
+    </section>
+  
+    <!-- CTA3 -->
+    <section class="cta cta3">
+      <h1>Fitness goals</h1>
+      <p>
+        We want to lead by example, we have the best fitness coaches and workout trainers. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam, beatae? Fugit voluptatem fuga accusantium ratione
+         voluptas sapiente quo consectetur saepe.
+        </p>
+    </section>
+    <a href="#" class="go-top" > <i class="fa-solid fa-dumbbell" style="font-size:1.5em;display:flex"> </i>Go Top</i></a>
+    </main>
 {% endblock %}
-

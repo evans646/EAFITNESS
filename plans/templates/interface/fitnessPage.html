@@ -1,5 +1,5 @@
 {% extends 'plans/base.html' %} {% block content %}
-<div class="container text-center">
+<div class="stories-page-wrapper">
   <img
     src="{{ beauty.image.url }}"
     alt=""
@@ -8,7 +8,7 @@
     alt="blog image"
   />
   <h1 class="py-3">{{ fitness.title}}</h1>
-  <p class="page-description">{{ fitness.description }}</p>
+  <p class="stories-page-description">{{ fitness.description }}</p>
   <p>{{ fitness.text }}</p>
 </div>
 {% include "components/social-icons.html" %} 

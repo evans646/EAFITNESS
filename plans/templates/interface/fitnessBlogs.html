@@ -1,40 +1,26 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
-<h1 class=" py-3 page-title">Fitness</h1>
-<p class="text-center page-lead">Get Ready, sweat, go!</p>
-  <div class="container-fluid main">
-      <div class="row">
-        {% for fitnessBlog in fitnessBlogs.all %}
-        <div class="col-md-4 ">
-          <div class="main">
-              <ul class="cards flex">
-                  <li class="cards_item content">
-                    <div class="card">
-                      <div class="card_image"><img  src="{{ fitnessBlog.image.url}}"></div>
-                      <div class="card_content">
-                        <h2 class="card_title">{{fitnessBlog.title}}</h2>
-                        <p class="card_text">{{ fitnessBlog.description}}</p>            
-                        <a href="{% url 'fitness' fitnessBlog.id %}">
-                            <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-              </ul>
-            </div>
-        </div>
-        {% endfor %}
-      </div>
-      {%if fitnessBlogs.all%}
-      <div class="loadmore-wrapper">
-          <a href="#" id="loadMore">Load More</a>
-      </div>
-      {%endif%}
-    </div>
+<div class="page-wrapper">
+  <section class="blogs" id="blogs">
+    <h1 class="page-title">Fitness</h1>
+    <p class="text-center page-lead">Get Ready, sweat, go!</p>
+    <ul class="blogList">
+      {%for fitnessBlog in fitnessBlogs.all%}
+       <li>
+        <img src="{{ fitnessBlog.image.url}}" alt="humpback whales">
+        <h3>{{fitnessBlog.title}}</h3>
+        <p>{{fitnessBlog.summary}}</p>
+        <a href="{% url 'fitness' fitnessBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
+      </li>
+      {%endfor%}
+      </ul>
+  </section>
+  {%if fitnessBlogs.all%}
+  <div class="loadmore-wrapper">
+      <a href="#" id="loadMore">Load More</a>
+  </div>
+  {%endif%}
+</div>
 {% endblock %}
-
-
-
 

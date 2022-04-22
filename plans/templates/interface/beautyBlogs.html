@@ -1,39 +1,28 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 {% load static %}
-<h1 class=" py-3 page-title">Beauty</h1>
-<p class="text-center page-lead">
-  In case no one has told you this yet today, you look beautiful.
-</p>
-<link rel="stylesheet" type="text/css"  href="{% static 'css/card.css' %}">
-  <div class="container-fluid main">
-      <div class="row">
-        {% for beautyBlog in beautyBlogs.all %}
-        <div class="col-md-4 ">
-          <div class="main">
-              <ul class="cards flex">
-                  <li class="cards_item content">
-                    <div class="card">
-                      <div class="card_image"><img  src="{{ beautyBlog.image.url}}"></div>
-                      <div class="card_content">
-                        <h2 class="card_title">{{beautyBlog.title}}</h2>
-                        <p class="card_text">{{beautyBlog.description}}</p>            
-                        <a href="{% url 'beauty' beautyBlog.id %}">
-                            <button class="btn card_btn">Read More <i class="fa-solid fa-dumbbell"></i></button>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
-              </ul>
-            </div>
-        </div>
-        {% endfor %}
-      </div>
-      {%if beautyBlogs.all%}
-      <div class="loadmore-wrapper">
-          <a href="#" id="loadMore">Load More</a>
-      </div>
-      {%endif%}
-    </div>
+<div class="page-wrapper">
+  <section class="blogs" id="blogs">
+    <h1 class="page-title">Beauty</h1>
+    <p class="text-center page-lead">
+      In case no one has told you this yet today, you look beautiful.
+    </p>
+    <ul class="blogList">
+      {%for beautyBlog in beautyBlogs.all%}
+       <li>
+        <img src="{{ beautyBlog.image.url}}" alt="blog image">
+        <h3>{{beautyBlog.title}}</h3>
+        <p>{{beautyBlog.description}}</p>
+        <a  href="{% url 'beauty' beautyBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
+      </li>
+      {%endfor%}
+      </ul>
+  </section>
+  {%if beautyBlogs.all%}
+  <div class="loadmore-wrapper">
+      <a href="#" id="loadMore">Load More</a>
+  </div>
+  {%endif%}
+</div>
 {% endblock %}
 

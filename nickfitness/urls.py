@@ -32,7 +32,6 @@ urlpatterns = [
     path('auth/settings', views.settings, name='settings'),
     path('updateaccounts', views.updateaccounts, name='updateaccounts'),
     path('about', views.about, name='about'),
-    path('blog', views.blog, name='blog'),
     path('fitness', views.fitnessBlogs, name='fitnessBlogs'),
     path('story=/fitness/<int:pk>', views.fitness, name='fitness'),
     path('food', views.foodsPage, name='foodsPage'),

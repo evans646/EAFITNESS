@@ -1,45 +1,23 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<div class="container" style="display: block;
-margin: 15% auto;">
+<div class="settingspage-container" style="display: block;
+margin: 23% auto;">
   {% if cancel_at_period_end %}
 <p>Your membership will run to the end of your billing cycle.</p>
   {% elif membership %}
   <form action="{% url 'settings' %}" method="POST">
     {% csrf_token %}
     <p>
-     Do you want to cancel your membership ? hit the button below to cancle and your subscribtion will run to the end of the billing cycle 
+     Do you want to cancel your membership ? Cancel and your subscription will run to the end of the billing cycle 
     </p>
-    <input type="submit" value="Cancel " style="text-transform:uppercase;
-    font-size:19px;
-    color:#fefefe !important;
-    text-decoration:none;
-    background-color:#212529;
-    line-height:1;
-    padding: 20px !important;;
-    border-top:1px solid #bbb !important;
-    width:40%;
-    display:inline-block;
-    cursor: pointer;
-    margin-top:6px;
-    display:block;">
+    <input type="submit" value="Cancel " id="cancel-btn">
   </form>
   {% else %}
- <h4 class='mt-5'> <a href="{% url 'join' %}" style="text-transform:uppercase;
- text-align: center;
-  font-size:19px;
-  color:#fefefe !important;
-  text-decoration:none;
-  background-color:#212529;
-  line-height:1;
-  padding: 20px !important;;
-  border-top:1px solid #bbb !important;
-  width:40%;
-  display:inline-block;
-  cursor: pointer;
-  margin-top:6px;
-  display:block;">Get a membership</a></h4>
+  <p style="margin-right: 15%;">
+    Go premium to enjoy a wide range of articles along with personal coaching 
+  </p>
+ <h4> <a href="{% url 'join' %}" id="join-btn">Get a membership</a></h4>
   {% endif %}
 </div>
 {% endblock %}
-{% include "../plans/footer.html" %}
+
