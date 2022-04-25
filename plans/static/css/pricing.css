@@ -17,14 +17,12 @@
 .plan-price:hover {
   box-shadow: 0 8px 12px 0 rgba(7, 7, 7, 0.2)
 }
-
 /* Pricing header */
 .plan-price .plan-header {
   background-color: rgb(57, 54, 54);
   color: white;
   font-size: 25px;
 }
-
 /* List items */
 .plan-price li {
   border-bottom: 1px solid rgba(64, 61, 61, 0.325);
@@ -34,7 +32,7 @@
 
 /* Grey list item */
 .plan-price .grey {
-  background-color: #969fa076 ;
+  background-color: rgb(240, 255, 246);
   font-size: 20px;
 }
 
@@ -44,11 +42,10 @@
  border-radius: 4px;
  box-shadow: inset 0 0 5px #f3f6f7;
  color: #ffffff;
- width: 40%;
+ width: 55%;
  padding: 0.60rem .20rem;
  letter-spacing: 1px;
  text-shadow: 0 0 1px  #0f8896 ;
- display: flex;
  justify-content: center;
  text-decoration: none;
  margin: auto;
@@ -56,10 +53,15 @@
 }
 
 .pricing-button:hover {
- background-color: #223054;
+ /* background-color: #223054;
  box-shadow: inset 0 0 5px  #0f8896 ;
  color: #fff;
- transition: 0.14s ease-in-out;
+ transition: 0.14s ease-in-out; */
+
+
+ background-color: #104458;
+ box-shadow: inset 0 0 5px  #0f8896 ;
+ color: #fff;
 }
 .pricing-container{
   width: 70%;

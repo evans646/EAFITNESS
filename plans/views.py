@@ -8,6 +8,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
 
+from django.urls import reverse_lazy
+from django.contrib.auth.views import PasswordResetView
+from django.contrib.messages.views import SuccessMessageMixin
+
 import stripe
 stripe.api_key= 'sk_test_51Ju6PeE9EMUzkjDtSScXBBRUBSOGkY7CobWtxDxUapVGMCWibuH53rjWyuIV9maaKp4Qn9VpO7RE5A8wX2QCcEJo006qsqVE3X'
 
@@ -262,6 +266,8 @@ def updateaccounts(request):
         customer.save()
     return HttpResponse('completed')
 
+
+
 class SignUp(generic.CreateView):
     form_class = CustomSignupForm
     success_url = reverse_lazy('home')
@@ -274,6 +280,12 @@ class SignUp(generic.CreateView):
         login(self.request, new_user)
         return valid
 
-
-
-
+class ResetPassword(SuccessMessageMixin, PasswordResetView):
+    template_name = 'registration/resetpassword.html'
+    email_template_name = 'registration/passwordreset_email.html'
+    subject_template_name = 'registration/passwordreset_sub.txt'
+    success_message = "We've emailed you instructions for setting your password, " \
+                      "if an account exists with the email you entered. You should receive them shortly." \
+                      " If you don't receive an email, " \
+                      "please make sure you've entered the address you registered with, and check your spam folder."
+    success_url = reverse_lazy('home')

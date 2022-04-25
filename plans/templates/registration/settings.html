@@ -1,19 +1,19 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 <div class="settingspage-container" style="display: block;
-margin: 23% auto;">
+margin: 24% auto;">
   {% if cancel_at_period_end %}
 <p>Your membership will run to the end of your billing cycle.</p>
   {% elif membership %}
   <form action="{% url 'settings' %}" method="POST">
     {% csrf_token %}
-    <p>
-     Do you want to cancel your membership ? Cancel and your subscription will run to the end of the billing cycle 
+    <p style="margin-right:6%;">
+     Do you want to cancel your membership ? your subscription will run to the end of the billing cycle 
     </p>
     <input type="submit" value="Cancel " id="cancel-btn">
   </form>
   {% else %}
-  <p style="margin-right: 15%;">
+  <p style="margin-right: 16%;">
     Go premium to enjoy a wide range of articles along with personal coaching 
   </p>
  <h4> <a href="{% url 'join' %}" id="join-btn">Get a membership</a></h4>

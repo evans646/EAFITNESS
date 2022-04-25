@@ -1,6 +1,6 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<div class="loginpage-wrapper  pb-5">
+<div class="loginpage-wrapper">
   <div class="login-page-container">
     <div class="col-left">
     
@@ -15,8 +15,8 @@
             <input class="btn" type="submit" value="Sign In" />
           </p>
           <p>
-            <a href="">Forget password?</a>
-            <a href="">Create an account.</a>
+            <!-- <a  href="{% url 'password_reset' %}">Forget password?</a> -->
+            <a  href="{%url 'signup'%}">Create an account</a>
           </p>
         </form>
       </div>

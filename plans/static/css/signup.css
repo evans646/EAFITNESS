@@ -47,10 +47,7 @@
     -webkit-transition: .3s;
   }
   
-  .signup-btn:hover {
-    color: #068359 ;
-    background: #eceaea;
-  }
+
   
   .signup-col-left,
   .signup-col-right {

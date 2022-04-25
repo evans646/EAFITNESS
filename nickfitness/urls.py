@@ -27,6 +27,7 @@ urlpatterns = [
     path('plans/<int:pk>', views.plan, name='plan'),
     path('auth/', include('django.contrib.auth.urls')),
     path('auth/signup', views.SignUp.as_view(), name='signup'),
+    path('password-reset/',views.ResetPassword.as_view(), name='password_reset'),
     path('join', views.join, name='join'),
     path('checkout', views.checkout, name='checkout'),
     path('auth/settings', views.settings, name='settings'),
