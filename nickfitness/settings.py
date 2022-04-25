@@ -27,7 +27,7 @@ SECRET_KEY = '=yl=b-rjsono594!l74t#nqx4x(@c0-)12^oi#0^zha06g^eif'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG =True
+DEBUG =False
 SITE_ID = 1
 
 
