@@ -1264,7 +1264,6 @@ footer {
 
  /* ######### 10a-vi. Problem, Large screen rules ######### */
  section.problem {
-   background: url(../images/problem1.png) no-repeat center left;
    max-width: 1200px;
    display: grid;
    grid-template-columns: repeat(8, 1fr);
