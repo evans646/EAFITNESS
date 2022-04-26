@@ -4,9 +4,9 @@
   <main>
   <section class="home-content">
     <h1>EA FITNESS</h1>
-    <h4>
+    <h3 style="color:#f86b24 !important">
      <span class="comma">“</span>A little progress each day adds up to big results<span>”</span>
-    </h4>
+    </h3>
     <i class="fa-solid fa-dumbbell" style="font-size:2em;margin-top: 1%;color:#0F8896"></i>
   </section>
     <section class="blogs" id="blogs">
@@ -25,7 +25,7 @@
           <p id="page-desc">{{plan.summary}}</p>
           <a  href="{% url 'plan' plan.id %}">
            Read more
-            <i class="fa-solid fa-dumbbell teamIcon"></i>
+            <i class="fa-solid fa-dumbbell" style="color:#f86b24 "></i>
           </a>
         </li>
         {%endfor%}
@@ -156,6 +156,6 @@
          voluptas sapiente quo consectetur saepe.
         </p>
     </section>
-    <a href="#" class="go-top" ><i class="fa-solid fa-dumbbell" style="font-size:1.5em;display:flex"> </i>Go Top</i></a>
+    <a href="#" class="go-top" ><i class="fa-solid fa-dumbbell" style="font-size:1.5em;display:flex;color:#f86b24 "> </i>Go Top</i></a>
     </main>
 {% endblock %}

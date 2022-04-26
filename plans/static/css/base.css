@@ -111,7 +111,9 @@ i {
   font-size: 1.25rem;
   cursor: pointer;
 }
-
+.header-button i{
+  color:#f86b24 
+}
 .header-button:before,
 .header-button:after {
   width: 4.4em;
@@ -183,9 +185,9 @@ i {
 .home-content{
   text-align: center
 }
-.home-content h4{
+.home-content h3{
   font-family: 'Ms Madi', cursive;
-  font-size: 2em
+  font-size: 2.3em
 }
 .home-content span{
   color: #0f8896 ;
@@ -404,7 +406,9 @@ h1.page-title{
  grid-template-columns: 1fr;
  grid-template-rows: auto minmax(140px, 1fr) auto;
 }
-
+.blogList i{
+  color: #f86b24
+}
 .blogList h3, .blogList img {
  grid-row: 1 / 2;
  grid-column: 1;
@@ -440,6 +444,11 @@ h1.page-title{
 .pages-title{
   padding: 30px !important;
   color: #0f8896 ;
+}
+.page-leadimg{
+  margin-left: 47%;
+  border-radius: 50% 50%;
+  padding-bottom: 10px;
 }
 
 #page-desc{

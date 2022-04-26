@@ -1,7 +1,7 @@
 {% load static %}
 <section style="height: 4.7% !important;display: flex;background-color:rgb(240, 255, 246);position:fixed;width:100%;">
   <div style="margin-top:5px;font-size:1.2em;padding-left: 5px;  font-family: Righteous, cursive;">
-    <span>
+    <span style="color:#f86b24">
     Stay connected
     </span>
       <a href="#" target="_blank" class="top-header-icon" style="text-decoration:none">
@@ -27,7 +27,7 @@
       </a>
   </div>
 
-  <div  style="margin-top:5px;font-size:1.2em;margin-left: auto; font-family: Righteous, cursive;">
+  <div  style="margin-top:5px;font-size:1.2em;margin-left: auto; font-family: Righteous, cursive; color: #f86b24">
       {% if user.is_authenticated %}
       <span style="padding:4px">
           Hi, {{user.username}}
@@ -39,7 +39,6 @@
       {%endif%}
   </div>
 </section>
-
   <!-- header / hero -->
   <header class="hero" id="home">
     <article>

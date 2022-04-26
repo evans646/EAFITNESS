@@ -4,9 +4,10 @@
 <div class="page-wrapper">
   <section class="blogs" id="blogs">
     <h1 class="page-title">Food</h1>
-    <p class="text-center page-lead">
+    <p style="text-align:center">
       Did someone say meal prep?
     </p>
+    <img src="{% static 'images/food.png' %}" alt="" srcset="" height="70" width="70" class="page-leadimg" >
     <ul class="blogList">
       {%for loveBlog in loveBlogs.all%}
        <li>
