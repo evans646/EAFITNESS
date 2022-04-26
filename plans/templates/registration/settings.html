@@ -1,7 +1,7 @@
 {% extends 'plans/base.html' %}
 {% block content %}
 <div class="settingspage-container" style="display: block;
-margin: 24% auto;">
+margin: 20% auto;">
   {% if cancel_at_period_end %}
 <p>Your membership will run to the end of your billing cycle.</p>
   {% elif membership %}
@@ -13,7 +13,7 @@ margin: 24% auto;">
     <input type="submit" value="Cancel " id="cancel-btn">
   </form>
   {% else %}
-  <p style="margin-right: 16%;">
+  <p style="margin-right: 13%;">
     Go premium to enjoy a wide range of articles along with personal coaching 
   </p>
  <h4> <a href="{% url 'join' %}" id="join-btn">Get a membership</a></h4>

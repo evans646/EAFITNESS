@@ -1,18 +1,18 @@
 {% extends 'plans/base.html' %}
 {% block content %}
-<h1 class="a2" style="font-size:2.3em;padding:2%;text-align:center!important">Premium Package <br/>
+<h1 class="a2" style="font-size:2.3em;padding:2%;text-align:center!important">Premium Package<br/>
 </h1>
 <div class="checkout-wrapper">
  <h6  class="checkout-header">EA Fitness {{plan|title}} Package</h6>
    <div>
-    <div class="row justify-content-center">
+    <div>
         <div>
           <ul>
             <li>
               <div>
                <span style="margin-right:10%;margin-top: 10%;">
               </div>
-              <span class="text-muted" style="color:#0f8896 ;margin-top:10%;font-size:1.5em;padding-top:10%">${{og_dollar}} {{plan|title}}</span>
+              <span style="color:#0f8896 ;margin-top:10%;font-size:1.5em;padding-top:10%">${{og_dollar}} {{plan|title}}</span>
             </span>
             </li>
             {% if coupon != 'none' %}
@@ -32,12 +32,11 @@
           <p  style="font-size:medium">(
             If you have coupon please redeem below (evansreferal,welcome,halloween)
           </p>
-          <form class="card p-2" action="{% url 'checkout' %}" method="GET">
+          <form action="{% url 'checkout' %}" method="GET">
             <div class="input-group" style="display:flex;justify-content:center">
-              
               <input type="text" class="form-control" placeholder="Promo code" name="coupon" style="outline: none !important;margin-right: 2%;width:40%;">
               <input type="hidden" value="{{plan}}" name="plan" />
-              <div class="input-group-append">
+              <div>
                 <button type="submit" class="redeem-btn">Redeem</button>
               </div>
             </div>

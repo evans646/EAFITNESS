@@ -21,8 +21,6 @@ img {
   height: auto;
 }
 
-
- 
 h1, h2, h3, h4 {
   font-family: 'Nunito', sans-serif;
   line-height: 1;
@@ -1106,7 +1104,7 @@ footer {
     margin-left: 23% !important;
     padding: 3%;
   }
- /* ######### 10a-i. HERO, Large screen rules ######### */
+
  header.hero {
    background: url(../images/carosel3.jpeg) no-repeat center left;
    background-size: cover;
@@ -1181,10 +1179,7 @@ footer {
    box-shadow: inset 0 0 5px  #0f8896 ;
    background-color: #0c4147;
  }
-
-
  
-/* ######### 10a-iii. Trips, Large screen rules ######### */
  .blogList {
  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
  }
@@ -1233,7 +1228,7 @@ footer {
    margin-right: 1rem;
  }
 
-/* ######### 10a-v. Team, Large screen rules ######### */
+
  .team {
    max-width: 1000px;
    margin: auto;
@@ -1262,7 +1257,6 @@ footer {
    grid-row: 2 / 3;
  }
 
- /* ######### 10a-vi. Problem, Large screen rules ######### */
  section.problem {
    max-width: 1200px;
    display: grid;

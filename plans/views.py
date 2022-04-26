@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-# from stripe.api_resources import customer, subscription
+from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
@@ -176,7 +176,7 @@ def checkout(request):
     except Customer.DoesNotExist:
         pass
     #coupons
-    coupons = {'halloween':15, 'welcome':10,'evansreferal':20}
+    coupons = {'halloween':15, 'welcome':10,'evansreferral':20}
     
     if request.method == 'POST':
         stripe_customer = stripe.Customer.create(email=request.user.email, source=request.POST['stripeToken'])
@@ -220,7 +220,6 @@ def checkout(request):
                 final_dollar = 100
         if request.method == 'GET' and 'coupon' in request.GET:
             if request.GET['coupon'].lower() in coupons:
-                print('fam')
                 coupon = request.GET['coupon'].lower()
                 percentage = coupons[request.GET['coupon'].lower()]
                 coupon_price = int((percentage / 100) * price)
