@@ -9,11 +9,11 @@
     </p>
     <img src="{% static 'images/food.png' %}" alt="" srcset="" height="70" width="70" class="page-leadimg" >
     <ul class="blogList">
-      {%for loveBlog in loveBlogs.all%}
+      {%for foodBlog in foodBlogs.all%}
        <li>
-        <img src="{{ loveBlog.image.url}}" alt="humpback whales">
-        <h3>{{loveBlog.title}}</h3>
-        <p>{{loveBlog.summary}}</p>
+        <img src="{{ foodBlog.image.url}}" alt="humpback whales">
+        <h3>{{foodBlog.title}}</h3>
+        <p>{{foodBlog.summary}}</p>
         <a  href="{% url 'food' foodBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
       </li>
       {%endfor%}
