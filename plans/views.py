@@ -37,11 +37,6 @@ def home(request):
 def about(request):
     return render(request, 'interface/about.html')
 
-@login_required
-def blogdetail(request, blog_id):
-    blog_detail = get_object_or_404(Blog, pk=blog_id) #every model in the db has a pk(primary key)
-    return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
-
 def fitnessBlogs(request):
     fitnessBlogs = FitnessBlog.objects
     return render(request,'interface/fitnessBlogs.html', {'fitnessBlogs':fitnessBlogs})
@@ -61,8 +56,8 @@ def fitness(request,pk):
 
 #to show all foods
 def foodsPage(request):
-    foods = Food.objects
-    return render(request,'interface/foodsPage.html', {'foods':foods})
+    foodBlogs = Food.objects
+    return render(request,'interface/foodsPage.html', {'foods':foodBlogs})
 #this is the food object,so if a user !has sub to premium they will be redirected to join 
 def food(request,pk):
     food = get_object_or_404(Food,pk=pk)
