@@ -9,7 +9,7 @@
     <ul class="blogList">
       {%for fitnessBlog in fitnessBlogs.all%}
        <li>
-        <img src="{{ fitnessBlog.image.url}}" alt="humpback whales">
+        <img src="{{ fitnessBlog.image.url}}" alt="blog image">
         <h3>{{fitnessBlog.title}}</h3>
         <p>{{fitnessBlog.summary}}</p>
         <a href="{% url 'fitness' fitnessBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>

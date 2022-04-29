@@ -11,15 +11,15 @@
     <ul class="blogList">
       {%for foodBlog in foodBlogs.all%}
        <li>
-        <img src="{{ foodBlog.image.url}}" alt="humpback whales">
+        <img src="{{ foodBlog.image.url}}" alt="food blog">
         <h3>{{foodBlog.name}}</h3>
         <p>{{foodBlog.description}}</p>
-        <a  href="{% url 'food' foodBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
+        <a href="{% url 'food' foodBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
       </li>
       {%endfor%}
       </ul>
   </section>
-  {%if loveBlogs.all%}
+  {%if foodBlogs.all%}
   <div class="loadmore-wrapper">
       <a href="#" id="loadMore">Load More</a>
   </div>

@@ -11,10 +11,10 @@
     <ul class="blogList">
       {%for cultureBlog in cultureBlogs.all%}
        <li>
-        <img src="{{ cultureBlog.image.url}}" alt="humpback whales">
+        <img src="{{ cultureBlog.image.url}}" alt="blog image">
         <h3>{{cultureBlog.title}}</h3>
-        <p>{{cultureBlog.summary}}</p>
-        <a  href="{% url 'culture' cultureBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
+        <p>{{cultureBlog.description}}</p>
+        <a href="{% url 'culture' cultureBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
       </li>
       {%endfor%}
       </ul>

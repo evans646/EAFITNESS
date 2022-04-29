@@ -57,7 +57,7 @@ def fitness(request,pk):
 #to show all foods
 def foodsPage(request):
     foodBlogs = Food.objects
-    return render(request,'interface/foodsPage.html', {'foods':foodBlogs})
+    return render(request,'interface/foodsPage.html', {'foodBlogs':foodBlogs})
 #this is the food object,so if a user !has sub to premium they will be redirected to join 
 def food(request,pk):
     food = get_object_or_404(Food,pk=pk)
