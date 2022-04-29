@@ -45,7 +45,6 @@ urlpatterns = [
     path('story=/beauty/<int:pk>', views.beauty, name='beauty'),
     path('culture', views.cultureBlogs, name='cultureBlogs'),
     path('story=/culture/<int:pk>', views.culture, name='culture'),
-    path('blogs/<int:blog_id>',views.blogdetail,name='blogdetail')
 ]
 
 
