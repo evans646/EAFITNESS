@@ -12,8 +12,8 @@
       {%for foodBlog in foodBlogs.all%}
        <li>
         <img src="{{ foodBlog.image.url}}" alt="humpback whales">
-        <h3>{{foodBlog.title}}</h3>
-        <p>{{foodBlog.summary}}</p>
+        <h3>{{foodBlog.name}}</h3>
+        <p>{{foodBlog.description}}</p>
         <a  href="{% url 'food' foodBlog.id %}">Read more <i class="fa-solid fa-dumbbell teamIcon"></i></a>
       </li>
       {%endfor%}

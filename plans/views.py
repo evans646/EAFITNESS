@@ -3,7 +3,7 @@ from stripe.api_resources import customer, subscription
 from .forms import CustomSignupForm
 from django.urls import reverse_lazy
 from django.views import generic
-from .models import Beauty, FitnessPlan,Customer,Blog,Food,Health,Culture,Love,FitnessBlog
+from .models import Beauty, FitnessPlan,Customer,Food,Health,Culture,Love,FitnessBlog
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.http import HttpResponse
@@ -36,11 +36,6 @@ def home(request):
 
 def about(request):
     return render(request, 'interface/about.html')
-
-@login_required
-def blogdetail(request, blog_id):
-    blog_detail = get_object_or_404(Blog, pk=blog_id) #every model in the db has a pk(primary key)
-    return render(request, 'interface/blogDetailPage.html', {'blog':blog_detail})
 
 def fitnessBlogs(request):
     fitnessBlogs = FitnessBlog.objects
