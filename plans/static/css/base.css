@@ -478,14 +478,14 @@ text-align: center;
   }
 
   .hr-line {
-    display: flex !important;
+    display: flex;
   }
   
   .hr-line:before,
   .hr-line:after {
     content: "";
     flex: 1;
-    border-bottom: 5px solid;
+    border-bottom: 1px solid;
     margin: auto 0.25em;
     color:#094049
   }
@@ -701,7 +701,6 @@ text-align: center;
   font-family: "Righteous", cursive;
   color: white !important;
   font-weight: bold;
-  /* padding: 1.18em 1.32em 1.03em; */
   padding: 1.2em 1.2em 1em;
   line-height: 1;
   border-radius: 1em;
