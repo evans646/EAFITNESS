@@ -1,9 +1,9 @@
 # Evans-Fitness
 
 <h4>Premium fitness website</h4>
-
+<hr/>
 <p>
-Some of teh stories/ blogs are  premium contents so you will need to activate premium in order to have access to those contents
+Some of the stories/ blogs are  premium contents so you will need to activate premium in order to have access to those contents
 </p>
 <ul>
     <li>You need to create an account and login in before you can subscribe to a paid membership/ premium</li>
@@ -34,7 +34,7 @@ for example : 232 as cvc and 02/2022 as expiry date
 <p>
   Use any coupon: [Halloween,Welcome, Evansreferal]
 </p>
-
+<hr/>
 <p>
 View live site <a href="eafitness.herokuapp.com" target="_blank">here</a> 
-</p>g
+</p>
