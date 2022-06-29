@@ -36,5 +36,6 @@ for example : 232 as cvc and 02/2022 as expiry date
 </p>
 
 <p>
+
 View live site <a href="eafitness.herokuapp.com" target="_blank">here</a> 
-</p>g
+</p>
