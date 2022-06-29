@@ -157,14 +157,12 @@ def plan(request,pk):
                     return redirect('join')
         return redirect('join')
     else:
-        return render(request, 'plans/plan.html', {'plan':plan})
-
+        return render(request, 'plans/plan.html', {'plan':plan});
 def join(request):
     return render(request, 'plans/join.html')
 
 @login_required
 def checkout(request):
-
     try:
         if request.user.customer.membership:
             return redirect('settings')
