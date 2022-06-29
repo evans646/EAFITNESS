@@ -37,7 +37,6 @@ for example : 232 as cvc and 02/2022 as expiry date
 
 <p>
 
-=======
 <hr/>
 <p>
 
