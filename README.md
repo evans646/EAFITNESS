@@ -40,5 +40,5 @@ for example : 232 as cvc and 02/2022 as expiry date
 <hr/>
 <p>
 
-View live site <a href="eafitness.herokuapp.com" target="_blank">here</a> 
+View live site <a href="https://eafitness.herokuapp.com" target="_blank">here</a> 
 </p>
